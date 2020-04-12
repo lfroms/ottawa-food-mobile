@@ -9,10 +9,11 @@
 import SwiftUI
 
 struct FeaturedSectionContainer: View {
+    @EnvironmentObject private var restaurantViewState: RestaurantViewState
     @EnvironmentObject private var featuredService: FeaturedService
 
     var body: some View {
-        FeaturedSection(pages: pages)
+        FeaturedSection(action: self.didSelectRestaurant(_:), pages: pages)
             .equatable()
             .onAppear {
                 self.featuredService.fetch()
@@ -20,7 +21,7 @@ struct FeaturedSectionContainer: View {
     }
 
     private var pages: [RestaurantItem] {
-        featuredService.featured.compactMap {
+        self.featuredService.featured.compactMap {
             guard let node = $0 else {
                 return nil
             }
@@ -33,6 +34,11 @@ struct FeaturedSectionContainer: View {
 
             return RestaurantItem(text: node.restaurant.name, imageUrl: url, targetObjectId: node.id)
         }
+    }
+
+    private func didSelectRestaurant(_ restaurant: RestaurantItem) {
+        self.restaurantViewState.currentRestaurant = restaurant
+        self.restaurantViewState.togglePresentation()
     }
 }
 

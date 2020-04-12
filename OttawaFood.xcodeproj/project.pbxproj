@@ -17,6 +17,10 @@
 		800996CB2443A499002A63F1 /* TouchScaleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800996CA2443A499002A63F1 /* TouchScaleButton.swift */; };
 		800996CE2443AA6B002A63F1 /* ShrinkOnPressButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800996CD2443AA6B002A63F1 /* ShrinkOnPressButtonStyle.swift */; };
 		800996D22443B01C002A63F1 /* FeaturedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800996D12443AFF3002A63F1 /* FeaturedService.swift */; };
+		800996D52443B3A7002A63F1 /* RestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800996D42443B3A7002A63F1 /* RestaurantView.swift */; };
+		800996D72443B547002A63F1 /* RestaurantViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800996D62443B547002A63F1 /* RestaurantViewContainer.swift */; };
+		800996D92443B55C002A63F1 /* RestaurantViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800996D82443B55C002A63F1 /* RestaurantViewState.swift */; };
+		800996DB2443BB61002A63F1 /* RestaurantViewDimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800996DA2443BB61002A63F1 /* RestaurantViewDimmer.swift */; };
 		808AFBEC24429AD600550386 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFBEB24429AD600550386 /* SectionHeader.swift */; };
 		808AFBEF24429CC500550386 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFBEE24429CC500550386 /* TabBar.swift */; };
 		808AFBF124429D4E00550386 /* AppSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFBF024429D4E00550386 /* AppSection.swift */; };
@@ -71,6 +75,10 @@
 		800996CD2443AA6B002A63F1 /* ShrinkOnPressButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShrinkOnPressButtonStyle.swift; sourceTree = "<group>"; };
 		800996D02443AFD8002A63F1 /* Featured.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Featured.graphql; sourceTree = "<group>"; };
 		800996D12443AFF3002A63F1 /* FeaturedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedService.swift; sourceTree = "<group>"; };
+		800996D42443B3A7002A63F1 /* RestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantView.swift; sourceTree = "<group>"; };
+		800996D62443B547002A63F1 /* RestaurantViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewContainer.swift; sourceTree = "<group>"; };
+		800996D82443B55C002A63F1 /* RestaurantViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewState.swift; sourceTree = "<group>"; };
+		800996DA2443BB61002A63F1 /* RestaurantViewDimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewDimmer.swift; sourceTree = "<group>"; };
 		808AFBEB24429AD600550386 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		808AFBEE24429CC500550386 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		808AFBF024429D4E00550386 /* AppSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSection.swift; sourceTree = "<group>"; };
@@ -190,6 +198,16 @@
 			path = Featured;
 			sourceTree = "<group>";
 		};
+		800996D32443B396002A63F1 /* Restaurant */ = {
+			isa = PBXGroup;
+			children = (
+				800996D42443B3A7002A63F1 /* RestaurantView.swift */,
+				800996D62443B547002A63F1 /* RestaurantViewContainer.swift */,
+				800996DA2443BB61002A63F1 /* RestaurantViewDimmer.swift */,
+			);
+			path = Restaurant;
+			sourceTree = "<group>";
+		};
 		808AFBED24429CB700550386 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				808AFBF324429E1000550386 /* AppState.swift */,
+				800996D82443B55C002A63F1 /* RestaurantViewState.swift */,
 			);
 			path = States;
 			sourceTree = "<group>";
@@ -448,6 +467,7 @@
 				808AFC012442A4F700550386 /* Favorites */,
 				808AFC022442A4FD00550386 /* BucketList */,
 				808AFC032442A50400550386 /* Profile */,
+				800996D32443B396002A63F1 /* Restaurant */,
 				808AFBFF2442A47E00550386 /* CurrentSection.swift */,
 				808AFBFD2442A47100550386 /* CurrentSectionContainer.swift */,
 			);
@@ -587,6 +607,7 @@
 				808AFBF124429D4E00550386 /* AppSection.swift in Sources */,
 				808AFC1C2442A8D300550386 /* FeaturedCard.swift in Sources */,
 				800254F9243EA6B30026B7C8 /* SceneDelegate.swift in Sources */,
+				800996D92443B55C002A63F1 /* RestaurantViewState.swift in Sources */,
 				808AFC192442A86200550386 /* RestaurantItem.swift in Sources */,
 				808AFBF424429E1000550386 /* AppState.swift in Sources */,
 				808AFC5424439BC400550386 /* TrendingService.swift in Sources */,
@@ -598,15 +619,18 @@
 				80F942DB244299D3003B5A49 /* AppServices.swift in Sources */,
 				808AFC052442A50F00550386 /* FavoritesSection.swift in Sources */,
 				808AFC2D2442B4EA00550386 /* RestaurantCard.swift in Sources */,
+				800996DB2443BB61002A63F1 /* RestaurantViewDimmer.swift in Sources */,
 				808AFC1F2442AB0600550386 /* ImageLoader.swift in Sources */,
 				808AFC372443969900550386 /* ScrollableStackLabeledSection.swift in Sources */,
 				808AFC292442B36E00550386 /* LabeledSection.swift in Sources */,
+				800996D72443B547002A63F1 /* RestaurantViewContainer.swift in Sources */,
 				800254FB243EA6B30026B7C8 /* AppLayout.swift in Sources */,
 				80F942D8244299A6003B5A49 /* ForYouSection.swift in Sources */,
 				808AFC302442B7D200550386 /* TrendingSectionContainer.swift in Sources */,
 				808AFBEF24429CC500550386 /* TabBar.swift in Sources */,
 				808AFC242442AB8300550386 /* TemporaryImageCache.swift in Sources */,
 				808AFBFE2442A47100550386 /* CurrentSectionContainer.swift in Sources */,
+				800996D52443B3A7002A63F1 /* RestaurantView.swift in Sources */,
 				808AFC3A2443978500550386 /* OttawaFavoritesSectionContainer.swift in Sources */,
 				808AFC4224439A3D00550386 /* GraphQL.swift in Sources */,
 				808AFC5924439C8000550386 /* API.swift in Sources */,

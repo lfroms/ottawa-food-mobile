@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct FeaturedSection: View {
+    let action: (RestaurantItem) -> Void
     let pages: [RestaurantItem]
 
     var body: some View {
@@ -18,7 +19,7 @@ struct FeaturedSection: View {
 
     private var mappedPages: [TouchScaleButton<FeaturedCard>] {
         pages.compactMap { page in
-            TouchScaleButton(action: {}) {
+            TouchScaleButton(action: { self.action(page) }) {
                 FeaturedCard(data: page)
             }
         }
@@ -33,6 +34,6 @@ extension FeaturedSection: Equatable {
 
 struct FeaturedSection_Previews: PreviewProvider {
     static var previews: some View {
-        FeaturedSection(pages: [])
+        FeaturedSection(action: { _ in }, pages: [])
     }
 }

@@ -20,6 +20,8 @@ struct AppLayout: View {
                 TabBarContainer()
             }
         }
+        .overlay(RestaurantViewDimmer())
+        .overlay(RestaurantViewContainer())
     }
 }
 
