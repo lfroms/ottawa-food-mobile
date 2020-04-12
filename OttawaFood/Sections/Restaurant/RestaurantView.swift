@@ -9,52 +9,15 @@
 import SwiftUI
 
 struct RestaurantView: View {
-    @Environment(\.localStatusBarStyle) var statusBarStyle
-    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @Environment(\.imageCache) private var cache: ImageCache
-
     var restaurant: RestaurantItem
 
     var body: some View {
-        ZStack(alignment: .topLeading) {
-            AsyncImage(url: restaurant.imageUrl ?? URL(string: "")!, placeholder: Color.gray, cache: cache)
-                .frame(height: 300)
-                .edgesIgnoringSafeArea(.top)
-
-            LinearGradient(
-                gradient: Gradient(colors: [Color.black.opacity(1), Color.black.opacity(0)]),
-                startPoint: .top,
-                endPoint: .bottom
-            )
-            .frame(height: 150)
-            .edgesIgnoringSafeArea(.top)
-
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack(alignment: .leading) {
-                    RestaurantViewBackButton(text: restaurant.text, action: self.didPressBackButton)
-                        .padding(.top, 10)
-                        .padding(.horizontal, 20)
-
-                    RestaurantViewTopSpacer()
-
-                    Group {
-                        Text("content")
-                    }
-                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .topLeading)
-                    .background(Color.primary.colorInvert())
-                }
-            }
+        RestaurantViewFrame(
+            imageUrl: restaurant.imageUrl,
+            backButtonText: restaurant.text
+        ) {
+            Text(self.restaurant.text)
         }
-        .navigationBarTitle("")
-        .navigationBarHidden(true)
-        .onAppear {
-            self.statusBarStyle.currentStyle = .lightContent
-        }
-    }
-
-    private func didPressBackButton() {
-        self.statusBarStyle.currentStyle = .default
-        self.mode.wrappedValue.dismiss()
     }
 }
 
