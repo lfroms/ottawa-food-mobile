@@ -13,7 +13,7 @@ struct AppLayout: View {
         NavigationView {
             ZStack(alignment: .bottom) {
                 ScrollView {
-                    ForYouSection()
+                    CurrentSectionContainer()
                 }
                 .navigationBarItems(trailing: Text("search"))
 

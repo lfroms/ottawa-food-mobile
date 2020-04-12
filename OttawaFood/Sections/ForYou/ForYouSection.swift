@@ -10,8 +10,13 @@ import SwiftUI
 
 struct ForYouSection: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            .navigationBarTitle(Text("hello"))
+        VStack(spacing: 30) {
+            FeaturedSectionContainer()
+                .padding(.top, 14)
+            
+//            Text("hel")
+        }
+        .navigationBarTitle(Text(AppSection.forYou.name))
     }
 }
 
