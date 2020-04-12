@@ -16,6 +16,7 @@
 		800996C82443A3EE002A63F1 /* OttawaFavoritesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EFD1DB2443A29200F2EDCC /* OttawaFavoritesService.swift */; };
 		800996CB2443A499002A63F1 /* TouchScaleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800996CA2443A499002A63F1 /* TouchScaleButton.swift */; };
 		800996CE2443AA6B002A63F1 /* ShrinkOnPressButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800996CD2443AA6B002A63F1 /* ShrinkOnPressButtonStyle.swift */; };
+		800996D22443B01C002A63F1 /* FeaturedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800996D12443AFF3002A63F1 /* FeaturedService.swift */; };
 		808AFBEC24429AD600550386 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFBEB24429AD600550386 /* SectionHeader.swift */; };
 		808AFBEF24429CC500550386 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFBEE24429CC500550386 /* TabBar.swift */; };
 		808AFBF124429D4E00550386 /* AppSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFBF024429D4E00550386 /* AppSection.swift */; };
@@ -68,6 +69,8 @@
 		80025504243EA6B40026B7C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		800996CA2443A499002A63F1 /* TouchScaleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchScaleButton.swift; sourceTree = "<group>"; };
 		800996CD2443AA6B002A63F1 /* ShrinkOnPressButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShrinkOnPressButtonStyle.swift; sourceTree = "<group>"; };
+		800996D02443AFD8002A63F1 /* Featured.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Featured.graphql; sourceTree = "<group>"; };
+		800996D12443AFF3002A63F1 /* FeaturedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedService.swift; sourceTree = "<group>"; };
 		808AFBEB24429AD600550386 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		808AFBEE24429CC500550386 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		808AFBF024429D4E00550386 /* AppSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSection.swift; sourceTree = "<group>"; };
@@ -176,6 +179,15 @@
 				800996CD2443AA6B002A63F1 /* ShrinkOnPressButtonStyle.swift */,
 			);
 			path = ButtonStyles;
+			sourceTree = "<group>";
+		};
+		800996CF2443AFD1002A63F1 /* Featured */ = {
+			isa = PBXGroup;
+			children = (
+				800996D12443AFF3002A63F1 /* FeaturedService.swift */,
+				800996D02443AFD8002A63F1 /* Featured.graphql */,
+			);
+			path = Featured;
 			sourceTree = "<group>";
 		};
 		808AFBED24429CB700550386 /* TabBar */ = {
@@ -367,6 +379,7 @@
 		808AFC5124439B9400550386 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				800996CF2443AFD1002A63F1 /* Featured */,
 				80EFD1D92443A28A00F2EDCC /* OttawaFavorites */,
 				808AFC5224439BAB00550386 /* Trending */,
 			);
@@ -559,6 +572,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				800996D22443B01C002A63F1 /* FeaturedService.swift in Sources */,
 				800996C82443A3EE002A63F1 /* OttawaFavoritesService.swift in Sources */,
 				808AFC322442B7D900550386 /* TrendingSection.swift in Sources */,
 				808AFBFA24429E9600550386 /* TabData.swift in Sources */,

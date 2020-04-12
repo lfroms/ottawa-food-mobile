@@ -1,0 +1,13 @@
+query Featured {
+  recommendations(first: 4) {
+    nodes {
+      id
+      index
+      restaurant {
+        id
+        name
+        imageUrl
+      }
+    }
+  }
+}

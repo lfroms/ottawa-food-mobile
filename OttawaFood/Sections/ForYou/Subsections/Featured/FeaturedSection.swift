@@ -16,9 +16,11 @@ struct FeaturedSection: View {
             .frame(height: 216)
     }
 
-    private var mappedPages: [FeaturedCard] {
-        pages.compactMap {
-            FeaturedCard(data: $0)
+    private var mappedPages: [TouchScaleButton<FeaturedCard>] {
+        pages.compactMap { page in
+            TouchScaleButton(action: {}) {
+                FeaturedCard(data: page)
+            }
         }
     }
 }

@@ -9,17 +9,30 @@
 import SwiftUI
 
 struct FeaturedSectionContainer: View {
+    @EnvironmentObject private var featuredService: FeaturedService
+
     var body: some View {
         FeaturedSection(pages: pages)
             .equatable()
+            .onAppear {
+                self.featuredService.fetch()
+            }
     }
 
     private var pages: [RestaurantItem] {
-        return [
-            RestaurantItem(text: "Test", imageUrl: URL(string: "https://www.blogto.com/listings/restaurants/upload/2012/09/20120919-sansoteiramen-miso.jpg")!, targetObjectId: "1"),
-            RestaurantItem(text: "Test", imageUrl: URL(string: "https://www.blogto.com/listings/restaurants/upload/2012/09/20120919-sansoteiramen-miso.jpg")!, targetObjectId: "2"),
-            RestaurantItem(text: "Test", imageUrl: URL(string: "https://www.blogto.com/listings/restaurants/upload/2012/09/20120919-sansoteiramen-miso.jpg")!, targetObjectId: "3")
-        ]
+        featuredService.featured.compactMap {
+            guard let node = $0 else {
+                return nil
+            }
+
+            var url: URL?
+
+            if let imageUrl = node.restaurant.imageUrl {
+                url = URL(string: imageUrl)!
+            }
+
+            return RestaurantItem(text: node.restaurant.name, imageUrl: url, targetObjectId: node.id)
+        }
     }
 }
 

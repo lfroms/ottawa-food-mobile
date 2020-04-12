@@ -31,6 +31,10 @@ struct PageViewController: UIViewControllerRepresentable {
     }
 
     func updateUIViewController(_ pageViewController: UIPageViewController, context: Context) {
+        guard controllers.count > 0 else {
+            return
+        }
+
         pageViewController.setViewControllers(
             [controllers[currentPage]], direction: .forward, animated: true)
     }

@@ -12,11 +12,13 @@ struct AppServices: ViewModifier {
     private static let appState: AppState = AppState()
     private static let trendingService: TrendingService = TrendingService()
     private static let ottawaFavoritesService: OttawaFavoritesService = OttawaFavoritesService()
+    private static let featuredService: FeaturedService = FeaturedService()
 
     func body(content: Content) -> some View {
         content
             .environmentObject(Self.appState)
             .environmentObject(Self.trendingService)
             .environmentObject(Self.ottawaFavoritesService)
+            .environmentObject(Self.featuredService)
     }
 }
