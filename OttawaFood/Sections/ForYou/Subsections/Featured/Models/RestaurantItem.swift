@@ -1,5 +1,5 @@
 //
-//  FeaturedPageData.swift
+//  RestaurantItem.swift
 //  OttawaFood
 //
 //  Created by Lukas Romsicki on 2020-04-11.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct FeaturedPageData: Equatable, Hashable {
+struct RestaurantItem: Equatable, Hashable {
     let text: String
     let imageUrl: URL
     let targetObjectId: Int

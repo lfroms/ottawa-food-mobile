@@ -11,7 +11,7 @@ import SwiftUI
 struct FeaturedCard: View {
     @Environment(\.imageCache) private var cache: ImageCache
 
-    let data: FeaturedPageData
+    let data: RestaurantItem
 
     var body: some View {
         ZStack(alignment: .bottomLeading) {
@@ -42,7 +42,7 @@ struct FeaturedCard: View {
 struct FeaturedCard_Previews: PreviewProvider {
     static var previews: some View {
         FeaturedCard(data:
-            FeaturedPageData(
+            RestaurantItem(
                 text: "Test",
                 imageUrl: URL(string: "https://www.blogto.com/listings/restaurants/upload/2012/09/20120919-sansoteiramen-miso.jpg")!,
                 targetObjectId: 0

@@ -14,11 +14,11 @@ struct FeaturedSectionContainer: View {
             .equatable()
     }
 
-    private var pages: [FeaturedPageData] {
+    private var pages: [RestaurantItem] {
         return [
-            FeaturedPageData(text: "Test", imageUrl: URL(string: "https://www.blogto.com/listings/restaurants/upload/2012/09/20120919-sansoteiramen-miso.jpg")!, targetObjectId: 0),
-            FeaturedPageData(text: "Test", imageUrl: URL(string: "https://www.blogto.com/listings/restaurants/upload/2012/09/20120919-sansoteiramen-miso.jpg")!, targetObjectId: 1),
-            FeaturedPageData(text: "Test", imageUrl: URL(string: "https://www.blogto.com/listings/restaurants/upload/2012/09/20120919-sansoteiramen-miso.jpg")!, targetObjectId: 2)
+            RestaurantItem(text: "Test", imageUrl: URL(string: "https://www.blogto.com/listings/restaurants/upload/2012/09/20120919-sansoteiramen-miso.jpg")!, targetObjectId: 0),
+            RestaurantItem(text: "Test", imageUrl: URL(string: "https://www.blogto.com/listings/restaurants/upload/2012/09/20120919-sansoteiramen-miso.jpg")!, targetObjectId: 1),
+            RestaurantItem(text: "Test", imageUrl: URL(string: "https://www.blogto.com/listings/restaurants/upload/2012/09/20120919-sansoteiramen-miso.jpg")!, targetObjectId: 2)
         ]
     }
 }

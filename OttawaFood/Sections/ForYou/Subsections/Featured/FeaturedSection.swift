@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct FeaturedSection: View {
-    let pages: [FeaturedPageData]
+    let pages: [RestaurantItem]
 
     var body: some View {
         PageView(self.mappedPages)
