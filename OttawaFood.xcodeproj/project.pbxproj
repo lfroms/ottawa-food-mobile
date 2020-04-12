@@ -23,6 +23,8 @@
 		800996E32443C5AB002A63F1 /* RestaurantViewBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800996E22443C5AB002A63F1 /* RestaurantViewBackButton.swift */; };
 		800996E52443C609002A63F1 /* RestaurantViewTopSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800996E42443C609002A63F1 /* RestaurantViewTopSpacer.swift */; };
 		800996E72443C685002A63F1 /* RestaurantViewFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800996E62443C685002A63F1 /* RestaurantViewFrame.swift */; };
+		800996EB2443C889002A63F1 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800996EA2443C889002A63F1 /* FloatingButton.swift */; };
+		800996ED2443C9BE002A63F1 /* FloatingRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800996EC2443C9BE002A63F1 /* FloatingRating.swift */; };
 		808AFBEC24429AD600550386 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFBEB24429AD600550386 /* SectionHeader.swift */; };
 		808AFBEF24429CC500550386 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFBEE24429CC500550386 /* TabBar.swift */; };
 		808AFBF124429D4E00550386 /* AppSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFBF024429D4E00550386 /* AppSection.swift */; };
@@ -83,6 +85,8 @@
 		800996E22443C5AB002A63F1 /* RestaurantViewBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewBackButton.swift; sourceTree = "<group>"; };
 		800996E42443C609002A63F1 /* RestaurantViewTopSpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewTopSpacer.swift; sourceTree = "<group>"; };
 		800996E62443C685002A63F1 /* RestaurantViewFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewFrame.swift; sourceTree = "<group>"; };
+		800996EA2443C889002A63F1 /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
+		800996EC2443C9BE002A63F1 /* FloatingRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingRating.swift; sourceTree = "<group>"; };
 		808AFBEB24429AD600550386 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		808AFBEE24429CC500550386 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		808AFBF024429D4E00550386 /* AppSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSection.swift; sourceTree = "<group>"; };
@@ -223,6 +227,8 @@
 			isa = PBXGroup;
 			children = (
 				800996E82443C861002A63F1 /* RestaurantViewFrame */,
+				800996EA2443C889002A63F1 /* FloatingButton.swift */,
+				800996EC2443C9BE002A63F1 /* FloatingRating.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -637,6 +643,7 @@
 				808AFBFA24429E9600550386 /* TabData.swift in Sources */,
 				808AFC072442A51700550386 /* BucketListSection.swift in Sources */,
 				808AFC3F244397FB00550386 /* TabBarFiller.swift in Sources */,
+				800996ED2443C9BE002A63F1 /* FloatingRating.swift in Sources */,
 				808AFC142442A82000550386 /* FeaturedSectionContainer.swift in Sources */,
 				800254F7243EA6B30026B7C8 /* AppDelegate.swift in Sources */,
 				808AFC3C2443978E00550386 /* OttawaFavoritesSection.swift in Sources */,
@@ -657,6 +664,7 @@
 				808AFC262442ABCF00550386 /* ImageCacheKey.swift in Sources */,
 				808AFC102442A7D700550386 /* PageControl.swift in Sources */,
 				80F942DB244299D3003B5A49 /* AppServices.swift in Sources */,
+				800996EB2443C889002A63F1 /* FloatingButton.swift in Sources */,
 				808AFC052442A50F00550386 /* FavoritesSection.swift in Sources */,
 				808AFC2D2442B4EA00550386 /* RestaurantCard.swift in Sources */,
 				808AFC1F2442AB0600550386 /* ImageLoader.swift in Sources */,

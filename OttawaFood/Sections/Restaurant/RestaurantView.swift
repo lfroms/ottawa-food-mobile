@@ -16,7 +16,21 @@ struct RestaurantView: View {
             imageUrl: restaurant.imageUrl,
             backButtonText: restaurant.text
         ) {
-            Text(self.restaurant.text)
+            VStack(alignment: .leading) {
+                HStack(alignment: .center, spacing: 10) {
+                    FloatingRating(text: "4.0")
+
+                    Spacer(minLength: 0)
+
+                    FloatingButton(symbolName: "bookmark.fill", color: .blue, action: {})
+                    FloatingButton(symbolName: "heart.fill", color: .red, action: {})
+                }
+                .padding(.top, -25)
+                .padding(.bottom, 20)
+                .padding(.horizontal, 20)
+
+                Text(self.restaurant.text)
+            }
         }
     }
 }
