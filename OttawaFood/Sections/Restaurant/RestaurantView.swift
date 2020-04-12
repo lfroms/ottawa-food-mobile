@@ -16,7 +16,7 @@ struct RestaurantView: View {
             imageUrl: restaurant.imageUrl,
             backButtonText: restaurant.text
         ) {
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 30) {
                 HStack(alignment: .center, spacing: 10) {
                     FloatingRating(text: "4.0")
 
@@ -26,11 +26,10 @@ struct RestaurantView: View {
                     FloatingButton(symbolName: "heart.fill", color: .red, action: {})
                 }
                 .padding(.top, -25)
-                .padding(.bottom, 20)
-                .padding(.horizontal, 20)
 
                 Text(self.restaurant.text)
             }
+            .padding(.horizontal, 20)
         }
     }
 }
