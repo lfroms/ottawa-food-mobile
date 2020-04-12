@@ -9,35 +9,21 @@
 import SwiftUI
 
 struct OttawaFavoritesSection: View {
-    var data: [OttawaFavoritesQuery.Data.OttawaFavorite.Node?]
+    var items: [RestaurantItem]
 
     var body: some View {
         ScrollableStackLabeledSection(label: "Ottawa favourites") {
-            ForEach(0..<self.restaurantCards.count) { index in
-                self.restaurantCards[index]
+            ForEach(self.items, id: \.self) { item in
+                TouchScaleButton(action: {}) {
+                    RestaurantCard(text: item.text, imageUrl: item.imageUrl, size: CGSize(width: 162, height: 131))
+                }
             }
-        }
-    }
-
-    private var restaurantCards: [RestaurantCard] {
-        data.compactMap {
-            guard let node = $0 else {
-                return nil
-            }
-
-            var url: URL?
-
-            if let imageUrl = node.restaurant.imageUrl {
-                url = URL(string: imageUrl)!
-            }
-
-            return RestaurantCard(text: node.restaurant.name, imageUrl: url, size: CGSize(width: 162, height: 131))
         }
     }
 }
 
 struct OttawaFavoritesSection_Previews: PreviewProvider {
     static var previews: some View {
-        OttawaFavoritesSection(data: [])
+        OttawaFavoritesSection(items: [])
     }
 }

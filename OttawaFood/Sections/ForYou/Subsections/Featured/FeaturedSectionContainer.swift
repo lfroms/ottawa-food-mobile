@@ -16,9 +16,9 @@ struct FeaturedSectionContainer: View {
 
     private var pages: [RestaurantItem] {
         return [
-            RestaurantItem(text: "Test", imageUrl: URL(string: "https://www.blogto.com/listings/restaurants/upload/2012/09/20120919-sansoteiramen-miso.jpg")!, targetObjectId: 0),
-            RestaurantItem(text: "Test", imageUrl: URL(string: "https://www.blogto.com/listings/restaurants/upload/2012/09/20120919-sansoteiramen-miso.jpg")!, targetObjectId: 1),
-            RestaurantItem(text: "Test", imageUrl: URL(string: "https://www.blogto.com/listings/restaurants/upload/2012/09/20120919-sansoteiramen-miso.jpg")!, targetObjectId: 2)
+            RestaurantItem(text: "Test", imageUrl: URL(string: "https://www.blogto.com/listings/restaurants/upload/2012/09/20120919-sansoteiramen-miso.jpg")!, targetObjectId: "1"),
+            RestaurantItem(text: "Test", imageUrl: URL(string: "https://www.blogto.com/listings/restaurants/upload/2012/09/20120919-sansoteiramen-miso.jpg")!, targetObjectId: "2"),
+            RestaurantItem(text: "Test", imageUrl: URL(string: "https://www.blogto.com/listings/restaurants/upload/2012/09/20120919-sansoteiramen-miso.jpg")!, targetObjectId: "3")
         ]
     }
 }

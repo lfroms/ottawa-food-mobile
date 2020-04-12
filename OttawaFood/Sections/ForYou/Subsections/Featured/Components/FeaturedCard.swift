@@ -15,9 +15,11 @@ struct FeaturedCard: View {
 
     var body: some View {
         ZStack(alignment: .bottomLeading) {
-            AsyncImage(url: data.imageUrl, placeholder: Color.gray.opacity(0.5), cache: self.cache)
-                .frame(minHeight: 216, maxHeight: 216)
-                .aspectRatio(2 / 3, contentMode: .fill)
+            if data.imageUrl != nil {
+                AsyncImage(url: data.imageUrl!, placeholder: Color.gray.opacity(0.5), cache: self.cache)
+                    .frame(minHeight: 216, maxHeight: 216)
+                    .aspectRatio(2 / 3, contentMode: .fill)
+            }
 
             LinearGradient(
                 gradient: Gradient(colors: [Color.black.opacity(0), Color.black.opacity(1)]),
@@ -45,7 +47,7 @@ struct FeaturedCard_Previews: PreviewProvider {
             RestaurantItem(
                 text: "Test",
                 imageUrl: URL(string: "https://www.blogto.com/listings/restaurants/upload/2012/09/20120919-sansoteiramen-miso.jpg")!,
-                targetObjectId: 0
+                targetObjectId: "0"
             )
         )
     }

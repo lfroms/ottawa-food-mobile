@@ -12,10 +12,27 @@ struct OttawaFavoritesSectionContainer: View {
     @EnvironmentObject private var ottawaFavoritesService: OttawaFavoritesService
 
     var body: some View {
-        OttawaFavoritesSection(data: ottawaFavoritesService.ottawaFavorites)
+        OttawaFavoritesSection(items: items)
+            .id(items.count)
             .onAppear {
                 self.ottawaFavoritesService.fetch()
             }
+    }
+
+    private var items: [RestaurantItem] {
+        ottawaFavoritesService.ottawaFavorites.compactMap {
+            guard let node = $0 else {
+                return nil
+            }
+
+            var url: URL?
+
+            if let imageUrl = node.restaurant.imageUrl {
+                url = URL(string: imageUrl)!
+            }
+
+            return RestaurantItem(text: node.restaurant.name, imageUrl: url, targetObjectId: node.id)
+        }
     }
 }
 

@@ -9,7 +9,7 @@
 import SwiftUI
 
 final class TrendingService: ObservableObject {
-    private(set) var trendingRestaurants: [TrendingQuery.Data.TrendingRestaurant.Node?] = []
+    @Published private(set) var trendingRestaurants: [TrendingQuery.Data.TrendingRestaurant.Node?] = []
 
     public func fetch() {
         let query = TrendingQuery()

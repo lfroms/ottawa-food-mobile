@@ -9,7 +9,7 @@
 import SwiftUI
 
 final class OttawaFavoritesService: ObservableObject {
-    private(set) var ottawaFavorites: [OttawaFavoritesQuery.Data.OttawaFavorite.Node?] = []
+    @Published private(set) var ottawaFavorites: [OttawaFavoritesQuery.Data.OttawaFavorite.Node?] = []
 
     public func fetch() {
         let query = OttawaFavoritesQuery()
