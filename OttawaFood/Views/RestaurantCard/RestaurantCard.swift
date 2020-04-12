@@ -12,28 +12,30 @@ struct RestaurantCard: View {
     @Environment(\.imageCache) private var cache: ImageCache
 
     let text: String
-    let imageUrl: URL
+    let imageUrl: URL?
     let size: CGSize
 
     var body: some View {
         ZStack(alignment: .bottomLeading) {
-            AsyncImage(url: imageUrl, placeholder: Color.gray.opacity(0.5), cache: self.cache)
-                .frame(width: size.width, height: size.height)
-                .aspectRatio(2 / 3, contentMode: .fill)
+            if imageUrl != nil {
+                AsyncImage(url: imageUrl!, placeholder: Color.gray.opacity(0.5), cache: self.cache)
+                    .frame(width: size.width, height: size.height)
+                    .aspectRatio(2 / 3, contentMode: .fill)
+            }
 
             LinearGradient(
                 gradient: Gradient(colors: [Color.black.opacity(0), Color.black.opacity(1)]),
                 startPoint: .top,
                 endPoint: .bottom
             )
-            .frame(height: 84)
+            .frame(height: 54)
 
             Text(text)
                 .font(.subheadline)
                 .fontWeight(.heavy)
                 .foregroundColor(.white)
-                .padding(.leading, 20)
-                .padding(.bottom, 15)
+                .padding(.leading, 12)
+                .padding(.bottom, 10)
         }
         .cornerRadius(12)
         .padding(.horizontal, 20)

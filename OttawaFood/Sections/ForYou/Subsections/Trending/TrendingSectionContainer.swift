@@ -9,8 +9,13 @@
 import SwiftUI
 
 struct TrendingSectionContainer: View {
+    @EnvironmentObject private var trendingService: TrendingService
+
     var body: some View {
-        TrendingSection()
+        TrendingSection(data: trendingService.trendingRestaurants)
+            .onAppear {
+                self.trendingService.fetch()
+            }
     }
 }
 
@@ -19,3 +24,4 @@ struct TrendingSectionContainer_Previews: PreviewProvider {
         TrendingSectionContainer()
     }
 }
+

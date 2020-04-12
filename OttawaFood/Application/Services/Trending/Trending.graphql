@@ -1,0 +1,13 @@
+query Trending {
+  trendingRestaurants(first: 15) {
+    nodes {
+      id
+      index
+      restaurant {
+        id
+        name
+        imageUrl
+      }
+    }
+  }
+}

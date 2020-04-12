@@ -30,7 +30,7 @@ struct TabBarItem: View {
 
     private var color: Color {
         guard tab == activeTab else {
-            return .black
+            return .primary
         }
 
         return tab.color

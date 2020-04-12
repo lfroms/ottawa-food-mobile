@@ -27,7 +27,7 @@ struct TabBar: View {
             }
             .padding(.horizontal, 42)
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 50, maxHeight: 50)
-            .background(Color.white.edgesIgnoringSafeArea(.all))
+            .background(Color.primary.colorInvert().edgesIgnoringSafeArea(.all))
         }
         .shadow(color: .black, radius: 55, x: 0, y: 50)
     }

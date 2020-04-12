@@ -1,0 +1,13 @@
+query OttawaFavorites {
+  ottawaFavorites(first: 15) {
+    nodes {
+      id
+      index
+      restaurant {
+        id
+        name
+        imageUrl
+      }
+    }
+  }
+}

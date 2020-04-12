@@ -9,8 +9,13 @@
 import SwiftUI
 
 struct OttawaFavoritesSectionContainer: View {
+    @EnvironmentObject private var ottawaFavoritesService: OttawaFavoritesService
+
     var body: some View {
-        OttawaFavoritesSection()
+        OttawaFavoritesSection(data: ottawaFavoritesService.ottawaFavorites)
+            .onAppear {
+                self.ottawaFavoritesService.fetch()
+            }
     }
 }
 
