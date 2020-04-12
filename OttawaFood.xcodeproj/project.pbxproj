@@ -18,9 +18,10 @@
 		800996CE2443AA6B002A63F1 /* ShrinkOnPressButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800996CD2443AA6B002A63F1 /* ShrinkOnPressButtonStyle.swift */; };
 		800996D22443B01C002A63F1 /* FeaturedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800996D12443AFF3002A63F1 /* FeaturedService.swift */; };
 		800996D52443B3A7002A63F1 /* RestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800996D42443B3A7002A63F1 /* RestaurantView.swift */; };
-		800996D72443B547002A63F1 /* RestaurantViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800996D62443B547002A63F1 /* RestaurantViewContainer.swift */; };
 		800996D92443B55C002A63F1 /* RestaurantViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800996D82443B55C002A63F1 /* RestaurantViewState.swift */; };
-		800996DB2443BB61002A63F1 /* RestaurantViewDimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800996DA2443BB61002A63F1 /* RestaurantViewDimmer.swift */; };
+		800996E02443C49A002A63F1 /* RootHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800996DF2443C49A002A63F1 /* RootHostingController.swift */; };
+		800996E32443C5AB002A63F1 /* RestaurantViewBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800996E22443C5AB002A63F1 /* RestaurantViewBackButton.swift */; };
+		800996E52443C609002A63F1 /* RestaurantViewTopSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800996E42443C609002A63F1 /* RestaurantViewTopSpacer.swift */; };
 		808AFBEC24429AD600550386 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFBEB24429AD600550386 /* SectionHeader.swift */; };
 		808AFBEF24429CC500550386 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFBEE24429CC500550386 /* TabBar.swift */; };
 		808AFBF124429D4E00550386 /* AppSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFBF024429D4E00550386 /* AppSection.swift */; };
@@ -76,9 +77,10 @@
 		800996D02443AFD8002A63F1 /* Featured.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Featured.graphql; sourceTree = "<group>"; };
 		800996D12443AFF3002A63F1 /* FeaturedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedService.swift; sourceTree = "<group>"; };
 		800996D42443B3A7002A63F1 /* RestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantView.swift; sourceTree = "<group>"; };
-		800996D62443B547002A63F1 /* RestaurantViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewContainer.swift; sourceTree = "<group>"; };
 		800996D82443B55C002A63F1 /* RestaurantViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewState.swift; sourceTree = "<group>"; };
-		800996DA2443BB61002A63F1 /* RestaurantViewDimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewDimmer.swift; sourceTree = "<group>"; };
+		800996DF2443C49A002A63F1 /* RootHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootHostingController.swift; sourceTree = "<group>"; };
+		800996E22443C5AB002A63F1 /* RestaurantViewBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewBackButton.swift; sourceTree = "<group>"; };
+		800996E42443C609002A63F1 /* RestaurantViewTopSpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewTopSpacer.swift; sourceTree = "<group>"; };
 		808AFBEB24429AD600550386 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		808AFBEE24429CC500550386 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		808AFBF024429D4E00550386 /* AppSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSection.swift; sourceTree = "<group>"; };
@@ -173,12 +175,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		800996C92443A487002A63F1 /* TouchScaleButton */ = {
+		800996C92443A487002A63F1 /* TouchScale */ = {
 			isa = PBXGroup;
 			children = (
 				800996CA2443A499002A63F1 /* TouchScaleButton.swift */,
 			);
-			path = TouchScaleButton;
+			path = TouchScale;
 			sourceTree = "<group>";
 		};
 		800996CC2443AA5F002A63F1 /* ButtonStyles */ = {
@@ -201,11 +203,27 @@
 		800996D32443B396002A63F1 /* Restaurant */ = {
 			isa = PBXGroup;
 			children = (
+				800996E12443C59E002A63F1 /* Components */,
 				800996D42443B3A7002A63F1 /* RestaurantView.swift */,
-				800996D62443B547002A63F1 /* RestaurantViewContainer.swift */,
-				800996DA2443BB61002A63F1 /* RestaurantViewDimmer.swift */,
 			);
 			path = Restaurant;
+			sourceTree = "<group>";
+		};
+		800996DE2443C48D002A63F1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				800996DF2443C49A002A63F1 /* RootHostingController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		800996E12443C59E002A63F1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				800996E22443C5AB002A63F1 /* RestaurantViewBackButton.swift */,
+				800996E42443C609002A63F1 /* RestaurantViewTopSpacer.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		808AFBED24429CB700550386 /* TabBar */ = {
@@ -427,7 +445,7 @@
 			isa = PBXGroup;
 			children = (
 				800996CC2443AA5F002A63F1 /* ButtonStyles */,
-				800996C92443A487002A63F1 /* TouchScaleButton */,
+				800996C92443A487002A63F1 /* TouchScale */,
 				808AFC2B2442B4DE00550386 /* RestaurantCard */,
 				80F942D424429972003B5A49 /* AppLayout */,
 				808AFC0A2442A6CF00550386 /* PageView */,
@@ -442,6 +460,7 @@
 		80F942D324429936003B5A49 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				800996DE2443C48D002A63F1 /* Controllers */,
 				808AFC5124439B9400550386 /* Services */,
 				808AFBF224429E0700550386 /* States */,
 				800254F6243EA6B30026B7C8 /* AppDelegate.swift */,
@@ -614,16 +633,17 @@
 				808AFC0E2442A70900550386 /* PageView.swift in Sources */,
 				808AFBFC24429EF500550386 /* TabBarItem.swift in Sources */,
 				808AFBEC24429AD600550386 /* SectionHeader.swift in Sources */,
+				800996E02443C49A002A63F1 /* RootHostingController.swift in Sources */,
 				808AFC262442ABCF00550386 /* ImageCacheKey.swift in Sources */,
 				808AFC102442A7D700550386 /* PageControl.swift in Sources */,
 				80F942DB244299D3003B5A49 /* AppServices.swift in Sources */,
 				808AFC052442A50F00550386 /* FavoritesSection.swift in Sources */,
 				808AFC2D2442B4EA00550386 /* RestaurantCard.swift in Sources */,
-				800996DB2443BB61002A63F1 /* RestaurantViewDimmer.swift in Sources */,
 				808AFC1F2442AB0600550386 /* ImageLoader.swift in Sources */,
+				800996E52443C609002A63F1 /* RestaurantViewTopSpacer.swift in Sources */,
+				800996E32443C5AB002A63F1 /* RestaurantViewBackButton.swift in Sources */,
 				808AFC372443969900550386 /* ScrollableStackLabeledSection.swift in Sources */,
 				808AFC292442B36E00550386 /* LabeledSection.swift in Sources */,
-				800996D72443B547002A63F1 /* RestaurantViewContainer.swift in Sources */,
 				800254FB243EA6B30026B7C8 /* AppLayout.swift in Sources */,
 				80F942D8244299A6003B5A49 /* ForYouSection.swift in Sources */,
 				808AFC302442B7D200550386 /* TrendingSectionContainer.swift in Sources */,

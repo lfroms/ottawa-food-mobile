@@ -17,11 +17,14 @@ struct FeaturedSection: View {
             .frame(height: 216)
     }
 
-    private var mappedPages: [TouchScaleButton<FeaturedCard>] {
+    private var mappedPages: [AnyView] {
         pages.compactMap { page in
-            TouchScaleButton(action: { self.action(page) }) {
-                FeaturedCard(data: page)
-            }
+            AnyView(
+                NavigationLink(destination: RestaurantView(restaurant: page)) {
+                    FeaturedCard(data: page)
+                }
+                .buttonStyle(ShrinkOnPressButtonStyle())
+            )
         }
     }
 }

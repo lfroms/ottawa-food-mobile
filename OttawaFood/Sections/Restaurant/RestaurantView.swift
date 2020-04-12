@@ -9,9 +9,10 @@
 import SwiftUI
 
 struct RestaurantView: View {
+    @Environment(\.localStatusBarStyle) var statusBarStyle
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @Environment(\.imageCache) private var cache: ImageCache
 
-    var didPerformDismiss: () -> Void
     var restaurant: RestaurantItem
 
     var body: some View {
@@ -30,39 +31,35 @@ struct RestaurantView: View {
 
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .leading) {
-                    HStack(alignment: .center, spacing: 10) {
-                        Button(action: self.didPerformDismiss) {
-                            Image(systemName: "chevron.left.circle.fill")
-                                .font(Font.system(size: 29).weight(.semibold))
+                    RestaurantViewBackButton(text: restaurant.text, action: self.didPressBackButton)
+                        .padding(.top, 10)
+                        .padding(.horizontal, 20)
 
-                            Text(restaurant.text)
-                                .font(.title)
-                                .fontWeight(.heavy)
-                        }
-                        .buttonStyle(PlainButtonStyle())
-                        .foregroundColor(.white)
-                    }
-                    .padding(.top, 10)
-                    .padding(.horizontal, 20)
-
-                    Rectangle()
-                        .opacity(0)
-                        .frame(height: 180)
+                    RestaurantViewTopSpacer()
 
                     Group {
                         Text("content")
                     }
-                    .frame(minWidth: 0, maxWidth: .infinity)
-                    .background(Color.white)
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .topLeading)
+                    .background(Color.primary.colorInvert())
                 }
             }
         }
-        .background(Color.primary.colorInvert().edgesIgnoringSafeArea(.all))
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
+        .onAppear {
+            self.statusBarStyle.currentStyle = .lightContent
+        }
+    }
+
+    private func didPressBackButton() {
+        self.statusBarStyle.currentStyle = .default
+        self.mode.wrappedValue.dismiss()
     }
 }
 
 struct RestaurantView_Previews: PreviewProvider {
     static var previews: some View {
-        RestaurantView(didPerformDismiss: {}, restaurant: RestaurantItem(text: "Test Restaurant", imageUrl: nil, targetObjectId: "1"))
+        RestaurantView(restaurant: RestaurantItem(text: "Test Restaurant", imageUrl: nil, targetObjectId: "1"))
     }
 }

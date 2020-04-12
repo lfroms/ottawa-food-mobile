@@ -14,9 +14,10 @@ struct TrendingSection: View {
     var body: some View {
         ScrollableStackLabeledSection(label: "Trending") {
             ForEach(self.items, id: \.self) { item in
-                TouchScaleButton(action: {}) {
+                NavigationLink(destination: RestaurantView(restaurant: item)) {
                     RestaurantCard(text: item.text, imageUrl: item.imageUrl, size: CGSize(width: 162, height: 131))
                 }
+                .buttonStyle(ShrinkOnPressButtonStyle())
             }
         }
     }
