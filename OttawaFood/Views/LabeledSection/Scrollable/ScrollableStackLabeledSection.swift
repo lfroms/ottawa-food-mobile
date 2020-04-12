@@ -25,7 +25,7 @@ struct ScrollableStackLabeledSection<Content: View>: View {
                 }
                 .padding(20)
             }
-            .padding(.top, -20)
+            .padding(.vertical, -20)
         }
     }
 }

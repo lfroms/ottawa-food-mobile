@@ -15,6 +15,7 @@ struct ForYouSection: View {
                 .padding(.top, 14)
 
             TrendingSectionContainer()
+            OttawaFavoritesSectionContainer()
         }
         .navigationBarTitle(Text(AppSection.forYou.name))
     }

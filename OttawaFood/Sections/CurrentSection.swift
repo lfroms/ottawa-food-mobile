@@ -28,6 +28,8 @@ struct CurrentSection: View {
             if section == .profile {
                 ProfileSection()
             }
+
+            TabBarFiller()
         }
     }
 }
