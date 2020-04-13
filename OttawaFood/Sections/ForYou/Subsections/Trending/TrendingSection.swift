@@ -15,7 +15,7 @@ struct TrendingSection: View {
         ScrollableStackLabeledSection(label: "Trending") {
             ForEach(self.items, id: \.self) { item in
                 NavigationLink(destination: RestaurantView(restaurant: item)) {
-                    RestaurantCard(text: item.text, imageUrl: item.imageUrl, size: CGSize(width: 162, height: 131))
+                    RestaurantCard(text: item.text, imageUrl: item.imageUrl, width: 162, height: 131)
                 }
                 .buttonStyle(ShrinkOnPressButtonStyle())
             }

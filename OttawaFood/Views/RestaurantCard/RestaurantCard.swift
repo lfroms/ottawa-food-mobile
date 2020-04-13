@@ -12,26 +12,21 @@ import URLImage
 struct RestaurantCard: View {
     let text: String
     let imageUrl: URL?
-    let size: CGSize
+    var width: CGFloat?
+    var height: CGFloat?
 
     var body: some View {
         ZStack(alignment: .bottomLeading) {
-            if imageUrl != nil {
-                URLImage(imageUrl!) {
-                    $0.image
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .clipped()
-                }
-                .frame(width: size.width, height: size.height)
-            }
-
             LinearGradient(
                 gradient: Gradient(colors: [Color.black.opacity(0), Color.black.opacity(1)]),
                 startPoint: .top,
                 endPoint: .bottom
             )
             .frame(height: 54)
+
+            Rectangle()
+                .frame(width: width, height: height)
+                .foregroundColor(Color.black.opacity(0.00001))
 
             Text(text)
                 .font(.subheadline)
@@ -40,10 +35,23 @@ struct RestaurantCard: View {
                 .padding(.leading, 12)
                 .padding(.bottom, 10)
         }
+        .frame(width: width, height: height, alignment: .bottomLeading)
+
+        .background(
+            Group {
+                if imageUrl != nil {
+                    URLImage(imageUrl!) {
+                        $0.image
+                            .resizable()
+                            .scaledToFill()
+                            .clipped()
+                    }
+                }
+            }
+            .allowsHitTesting(false)
+        )
         .cornerRadius(12)
-        .padding(.horizontal, 20)
         .shadow(radius: 10)
-        .frame(width: size.width, height: size.height)
     }
 }
 
@@ -52,7 +60,8 @@ struct RestaurantCard_Previews: PreviewProvider {
         RestaurantCard(
             text: "Restaurant",
             imageUrl: URL(string: "https://www.blogto.com/listings/restaurants/upload/2012/09/20120919-sansoteiramen-miso.jpg")!,
-            size: CGSize(width: 200, height: 200)
+            width: 200,
+            height: 200
         )
     }
 }

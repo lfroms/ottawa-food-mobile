@@ -10,8 +10,12 @@ import SwiftUI
 
 struct FavoritesSection: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            .navigationBarTitle(Text(AppSection.favorites.name))
+        VStack(alignment: .leading, spacing: 30) {
+            MyFavoritesSectionContainer()
+            AlsoLikeSectionContainer()
+        }
+        .padding(20)
+        .navigationBarTitle(Text(AppSection.favorites.name))
     }
 }
 

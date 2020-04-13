@@ -70,8 +70,6 @@ struct RestaurantViewFrame<Content: View>: View {
                 }
             }
         }
-        .navigationBarTitle("")
-        .navigationBarHidden(true)
         .onAppear {
             self.statusBarStyle.currentStyle = .lightContent
         }

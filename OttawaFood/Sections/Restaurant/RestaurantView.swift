@@ -54,6 +54,9 @@ struct RestaurantView: View {
         .onAppear {
             self.service.fetch(id: self.restaurant.targetObjectId)
         }
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 
     private func didToggleFavorite() {

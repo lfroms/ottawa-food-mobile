@@ -66,6 +66,10 @@
 		808AFC5924439C8000550386 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFC5824439C8000550386 /* API.swift */; };
 		80CE93192443F7A100BA33C9 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 80CE93182443F7A100BA33C9 /* URLImage */; };
 		80CE931D2443FC6E00BA33C9 /* CurrentUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE931B2443FC5500BA33C9 /* CurrentUserService.swift */; };
+		80CE93222443FDC800BA33C9 /* MyFavoritesSectionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE93212443FDC800BA33C9 /* MyFavoritesSectionContainer.swift */; };
+		80CE93242443FDD000BA33C9 /* MyFavoritesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE93232443FDCF00BA33C9 /* MyFavoritesSection.swift */; };
+		80CE93262443FDD900BA33C9 /* AlsoLikeSectionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE93252443FDD900BA33C9 /* AlsoLikeSectionContainer.swift */; };
+		80CE93282443FDE300BA33C9 /* AlsoLikeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE93272443FDE300BA33C9 /* AlsoLikeSection.swift */; };
 		80F942D8244299A6003B5A49 /* ForYouSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F942D7244299A6003B5A49 /* ForYouSection.swift */; };
 		80F942DB244299D3003B5A49 /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F942DA244299D3003B5A49 /* AppServices.swift */; };
 /* End PBXBuildFile section */
@@ -131,6 +135,10 @@
 		808AFC5824439C8000550386 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		80CE931B2443FC5500BA33C9 /* CurrentUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserService.swift; sourceTree = "<group>"; };
 		80CE931C2443FC5500BA33C9 /* CurrentUser.graphql */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = CurrentUser.graphql; sourceTree = "<group>"; tabWidth = 2; };
+		80CE93212443FDC800BA33C9 /* MyFavoritesSectionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavoritesSectionContainer.swift; sourceTree = "<group>"; };
+		80CE93232443FDCF00BA33C9 /* MyFavoritesSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavoritesSection.swift; sourceTree = "<group>"; };
+		80CE93252443FDD900BA33C9 /* AlsoLikeSectionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlsoLikeSectionContainer.swift; sourceTree = "<group>"; };
+		80CE93272443FDE300BA33C9 /* AlsoLikeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlsoLikeSection.swift; sourceTree = "<group>"; };
 		80EFD1DA2443A29000F2EDCC /* OttawaFavorites.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = OttawaFavorites.graphql; sourceTree = "<group>"; };
 		80EFD1DB2443A29200F2EDCC /* OttawaFavoritesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OttawaFavoritesService.swift; sourceTree = "<group>"; };
 		80F942D7244299A6003B5A49 /* ForYouSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouSection.swift; sourceTree = "<group>"; };
@@ -313,6 +321,7 @@
 		808AFC012442A4F700550386 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
+				80CE931E2443FD4F00BA33C9 /* Subsections */,
 				808AFC042442A50F00550386 /* FavoritesSection.swift */,
 			);
 			path = Favorites;
@@ -469,6 +478,33 @@
 				80CE931C2443FC5500BA33C9 /* CurrentUser.graphql */,
 			);
 			path = Favorites;
+			sourceTree = "<group>";
+		};
+		80CE931E2443FD4F00BA33C9 /* Subsections */ = {
+			isa = PBXGroup;
+			children = (
+				80CE931F2443FD5800BA33C9 /* MyFavorites */,
+				80CE93202443FD5C00BA33C9 /* AlsoLike */,
+			);
+			path = Subsections;
+			sourceTree = "<group>";
+		};
+		80CE931F2443FD5800BA33C9 /* MyFavorites */ = {
+			isa = PBXGroup;
+			children = (
+				80CE93212443FDC800BA33C9 /* MyFavoritesSectionContainer.swift */,
+				80CE93232443FDCF00BA33C9 /* MyFavoritesSection.swift */,
+			);
+			path = MyFavorites;
+			sourceTree = "<group>";
+		};
+		80CE93202443FD5C00BA33C9 /* AlsoLike */ = {
+			isa = PBXGroup;
+			children = (
+				80CE93252443FDD900BA33C9 /* AlsoLikeSectionContainer.swift */,
+				80CE93272443FDE300BA33C9 /* AlsoLikeSection.swift */,
+			);
+			path = AlsoLike;
 			sourceTree = "<group>";
 		};
 		80EFD1D92443A28A00F2EDCC /* OttawaFavorites */ = {
@@ -658,8 +694,10 @@
 				80CE931D2443FC6E00BA33C9 /* CurrentUserService.swift in Sources */,
 				800996D22443B01C002A63F1 /* FeaturedService.swift in Sources */,
 				800996C82443A3EE002A63F1 /* OttawaFavoritesService.swift in Sources */,
+				80CE93282443FDE300BA33C9 /* AlsoLikeSection.swift in Sources */,
 				808AFC322442B7D900550386 /* TrendingSection.swift in Sources */,
 				800996E72443C685002A63F1 /* RestaurantViewFrame.swift in Sources */,
+				80CE93242443FDD000BA33C9 /* MyFavoritesSection.swift in Sources */,
 				808AFBFA24429E9600550386 /* TabData.swift in Sources */,
 				808AFC072442A51700550386 /* BucketListSection.swift in Sources */,
 				808AFC3F244397FB00550386 /* TabBarFiller.swift in Sources */,
@@ -668,6 +706,7 @@
 				800254F7243EA6B30026B7C8 /* AppDelegate.swift in Sources */,
 				808AFC3C2443978E00550386 /* OttawaFavoritesSection.swift in Sources */,
 				808AFBF624429E3A00550386 /* TabBarContainer.swift in Sources */,
+				80CE93222443FDC800BA33C9 /* MyFavoritesSectionContainer.swift in Sources */,
 				800996CB2443A499002A63F1 /* TouchScaleButton.swift in Sources */,
 				808AFC162442A82700550386 /* FeaturedSection.swift in Sources */,
 				808AFBF124429D4E00550386 /* AppSection.swift in Sources */,
@@ -690,6 +729,7 @@
 				800996FC2443EFFC002A63F1 /* RestaurantViewIconDetail.swift in Sources */,
 				800996E52443C609002A63F1 /* RestaurantViewTopSpacer.swift in Sources */,
 				800996E32443C5AB002A63F1 /* RestaurantViewBackButton.swift in Sources */,
+				80CE93262443FDD900BA33C9 /* AlsoLikeSectionContainer.swift in Sources */,
 				808AFC372443969900550386 /* ScrollableStackLabeledSection.swift in Sources */,
 				808AFC292442B36E00550386 /* LabeledSection.swift in Sources */,
 				800254FB243EA6B30026B7C8 /* AppLayout.swift in Sources */,
