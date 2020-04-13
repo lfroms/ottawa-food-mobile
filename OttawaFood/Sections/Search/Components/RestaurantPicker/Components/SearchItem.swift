@@ -9,11 +9,9 @@
 import SwiftUI
 
 struct SearchItem<Content: View>: View {
-    var color: Color
     var content: () -> Content
 
-    @inlinable init(color: Color? = nil, @ViewBuilder content: @escaping () -> Content) {
-        self.color = color ?? .white
+    @inlinable init(@ViewBuilder content: @escaping () -> Content) {
         self.content = content
     }
 
@@ -32,7 +30,7 @@ struct SearchItem<Content: View>: View {
         }
         .padding(.horizontal, 20)
         .frame(height: 57)
-        .background(color)
+        .background(Color.primary.colorInvert())
         .cornerRadius(14)
         .shadow(color: Color.black.opacity(0.18), radius: 6, x: 0, y: 2)
     }
