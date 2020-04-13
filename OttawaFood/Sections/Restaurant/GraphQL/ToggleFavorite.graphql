@@ -1,0 +1,7 @@
+mutation ToggleFavorite($restaurantId: ID!) {
+  toggleFavoriteRestaurant(input: {id: $restaurantId}) {
+    restaurant {
+      favorite
+    }
+  }
+}

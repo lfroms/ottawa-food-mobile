@@ -15,7 +15,8 @@ struct FloatingRating: View {
         ZStack(alignment: .center) {
             Capsule()
                 .frame(width: 98, height: 44)
-                .foregroundColor(Color.white)
+                .foregroundColor(Color.primary)
+                .colorInvert()
                 .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 2)
 
             HStack(alignment: .firstTextBaseline, spacing: 8) {

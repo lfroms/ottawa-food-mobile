@@ -25,6 +25,11 @@
 		800996E72443C685002A63F1 /* RestaurantViewFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800996E62443C685002A63F1 /* RestaurantViewFrame.swift */; };
 		800996EB2443C889002A63F1 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800996EA2443C889002A63F1 /* FloatingButton.swift */; };
 		800996ED2443C9BE002A63F1 /* FloatingRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800996EC2443C9BE002A63F1 /* FloatingRating.swift */; };
+		800996F02443E087002A63F1 /* Restaurant.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 800996EF2443E087002A63F1 /* Restaurant.graphql */; };
+		800996F22443E0E3002A63F1 /* RestaurantViewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800996F12443E0E3002A63F1 /* RestaurantViewService.swift */; };
+		800996F42443EA4F002A63F1 /* ToggleFavorite.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 800996F32443EA4F002A63F1 /* ToggleFavorite.graphql */; };
+		800996F62443EBB9002A63F1 /* CreateBucketListItem.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 800996F52443EBB9002A63F1 /* CreateBucketListItem.graphql */; };
+		800996F82443EBBF002A63F1 /* DeleteBucketListItem.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 800996F72443EBBF002A63F1 /* DeleteBucketListItem.graphql */; };
 		808AFBEC24429AD600550386 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFBEB24429AD600550386 /* SectionHeader.swift */; };
 		808AFBEF24429CC500550386 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFBEE24429CC500550386 /* TabBar.swift */; };
 		808AFBF124429D4E00550386 /* AppSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFBF024429D4E00550386 /* AppSection.swift */; };
@@ -87,6 +92,11 @@
 		800996E62443C685002A63F1 /* RestaurantViewFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewFrame.swift; sourceTree = "<group>"; };
 		800996EA2443C889002A63F1 /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
 		800996EC2443C9BE002A63F1 /* FloatingRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingRating.swift; sourceTree = "<group>"; };
+		800996EF2443E087002A63F1 /* Restaurant.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Restaurant.graphql; sourceTree = "<group>"; };
+		800996F12443E0E3002A63F1 /* RestaurantViewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewService.swift; sourceTree = "<group>"; };
+		800996F32443EA4F002A63F1 /* ToggleFavorite.graphql */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = ToggleFavorite.graphql; sourceTree = "<group>"; tabWidth = 2; };
+		800996F52443EBB9002A63F1 /* CreateBucketListItem.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = CreateBucketListItem.graphql; sourceTree = "<group>"; };
+		800996F72443EBBF002A63F1 /* DeleteBucketListItem.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = DeleteBucketListItem.graphql; sourceTree = "<group>"; };
 		808AFBEB24429AD600550386 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		808AFBEE24429CC500550386 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		808AFBF024429D4E00550386 /* AppSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSection.swift; sourceTree = "<group>"; };
@@ -209,6 +219,7 @@
 		800996D32443B396002A63F1 /* Restaurant */ = {
 			isa = PBXGroup;
 			children = (
+				800996EE2443E06E002A63F1 /* GraphQL */,
 				800996E12443C59E002A63F1 /* Components */,
 				800996D42443B3A7002A63F1 /* RestaurantView.swift */,
 			);
@@ -249,6 +260,18 @@
 				800996E42443C609002A63F1 /* RestaurantViewTopSpacer.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		800996EE2443E06E002A63F1 /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				800996F12443E0E3002A63F1 /* RestaurantViewService.swift */,
+				800996EF2443E087002A63F1 /* Restaurant.graphql */,
+				800996F52443EBB9002A63F1 /* CreateBucketListItem.graphql */,
+				800996F72443EBBF002A63F1 /* DeleteBucketListItem.graphql */,
+				800996F32443EA4F002A63F1 /* ToggleFavorite.graphql */,
+			);
+			path = GraphQL;
 			sourceTree = "<group>";
 		};
 		808AFBED24429CB700550386 /* TabBar */ = {
@@ -600,9 +623,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				800996F02443E087002A63F1 /* Restaurant.graphql in Resources */,
 				808AFC5624439BD300550386 /* Trending.graphql in Resources */,
 				808AFC5024439B4E00550386 /* schema.json in Resources */,
+				800996F42443EA4F002A63F1 /* ToggleFavorite.graphql in Resources */,
 				80025503243EA6B40026B7C8 /* LaunchScreen.storyboard in Resources */,
+				800996F82443EBBF002A63F1 /* DeleteBucketListItem.graphql in Resources */,
+				800996F62443EBB9002A63F1 /* CreateBucketListItem.graphql in Resources */,
 				80025500243EA6B40026B7C8 /* Preview Assets.xcassets in Resources */,
 				800254FD243EA6B40026B7C8 /* Assets.xcassets in Resources */,
 			);
@@ -655,6 +682,7 @@
 				800254F9243EA6B30026B7C8 /* SceneDelegate.swift in Sources */,
 				800996D92443B55C002A63F1 /* RestaurantViewState.swift in Sources */,
 				808AFC192442A86200550386 /* RestaurantItem.swift in Sources */,
+				800996F22443E0E3002A63F1 /* RestaurantViewService.swift in Sources */,
 				808AFBF424429E1000550386 /* AppState.swift in Sources */,
 				808AFC5424439BC400550386 /* TrendingService.swift in Sources */,
 				808AFC0E2442A70900550386 /* PageView.swift in Sources */,

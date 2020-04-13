@@ -1,0 +1,8 @@
+mutation CreateBucketListItem($restaurantId: ID!) {
+  createBucketListItem(input: {restaurantId: $restaurantId}) {
+    bucketListItem {
+      id
+      status
+    }
+  }
+}

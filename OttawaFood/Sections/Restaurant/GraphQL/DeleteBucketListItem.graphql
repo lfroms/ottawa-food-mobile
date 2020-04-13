@@ -1,0 +1,8 @@
+mutation DeleteBucketListItem($restaurantId: ID!) {
+  deleteBucketListItem(input: {restaurantId: $restaurantId}) {
+    bucketListItem {
+      id
+      status
+    }
+  }
+}

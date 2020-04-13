@@ -9,11 +9,13 @@
 import SwiftUI
 
 struct RestaurantView: View {
+    @ObservedObject private var service = RestaurantViewService()
+
     var restaurant: RestaurantItem
 
     var body: some View {
         RestaurantViewFrame(
-            imageUrl: restaurant.imageUrl,
+            imageUrl: URL(string: service.restaurant?.imageUrl ?? ""),
             backButtonText: restaurant.text
         ) {
             VStack(alignment: .leading, spacing: 30) {
@@ -22,15 +24,38 @@ struct RestaurantView: View {
 
                     Spacer(minLength: 0)
 
-                    FloatingButton(symbolName: "bookmark.fill", color: .blue, action: {})
-                    FloatingButton(symbolName: "heart.fill", color: .red, action: {})
+                    FloatingButton(
+                        symbolName: "bookmark.fill",
+                        color: .blue,
+                        toggled: self.service.bucketListed,
+                        action: self.didToggleBucketList
+                    )
+                    FloatingButton(
+                        symbolName: "heart.fill",
+                        color: .red,
+                        toggled: self.service.restaurant?.favorite ?? false,
+                        action: self.didToggleFavorite
+                    )
                 }
                 .padding(.top, -25)
 
-                Text(self.restaurant.text)
+                Text(self.service.restaurant?.phone ?? "")
             }
             .padding(.horizontal, 20)
         }
+        .onAppear {
+            self.service.fetch(id: self.restaurant.targetObjectId)
+        }
+    }
+
+    private func didToggleFavorite() {
+        service.toggleFavorite(id: restaurant.targetObjectId)
+        UISelectionFeedbackGenerator().selectionChanged()
+    }
+
+    private func didToggleBucketList() {
+        service.toggleBucketListItem(id: restaurant.targetObjectId)
+        UISelectionFeedbackGenerator().selectionChanged()
     }
 }
 

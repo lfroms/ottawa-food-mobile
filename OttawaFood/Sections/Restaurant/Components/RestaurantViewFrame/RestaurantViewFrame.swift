@@ -29,7 +29,7 @@ struct RestaurantViewFrame<Content: View>: View {
 
     var body: some View {
         ZStack(alignment: .topLeading) {
-            AsyncImage(url: imageUrl ?? URL(string: "")!, placeholder: Color.gray, cache: cache)
+            AsyncImage(url: imageUrl ?? URL(string: "http://apple.com")!, placeholder: Color.gray, cache: cache)
                 .frame(height: 300)
                 .edgesIgnoringSafeArea(.top)
 

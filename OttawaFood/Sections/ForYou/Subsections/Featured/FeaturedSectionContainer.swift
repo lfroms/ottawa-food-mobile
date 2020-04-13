@@ -32,7 +32,7 @@ struct FeaturedSectionContainer: View {
                 url = URL(string: imageUrl)!
             }
 
-            return RestaurantItem(text: node.restaurant.name, imageUrl: url, targetObjectId: node.id)
+            return RestaurantItem(text: node.restaurant.name, imageUrl: url, targetObjectId: node.restaurant.id)
         }
     }
 
