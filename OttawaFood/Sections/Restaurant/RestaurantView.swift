@@ -41,7 +41,7 @@ struct RestaurantView: View {
 
                 VStack(alignment: .leading, spacing: 18) {
                     if self.service.restaurant?.phone != nil {
-                        RestaurantViewIconDetail(symbolName: "phone.circle.fill", color: .green, text: self.service.restaurant!.phone!.toPhoneNumber())
+                        RestaurantViewIconDetail(symbolName: "phone.circle.fill", color: .green, text: self.service.restaurant!.phone!)
                     }
 
                     if self.service.restaurant?.priceLevel != nil {
@@ -70,11 +70,5 @@ struct RestaurantView: View {
 struct RestaurantView_Previews: PreviewProvider {
     static var previews: some View {
         RestaurantView(restaurant: RestaurantItem(text: "Test Restaurant", imageUrl: nil, targetObjectId: "1"))
-    }
-}
-
-extension String {
-    public func toPhoneNumber() -> String {
-        return replacingOccurrences(of: "(\\d{3})(\\d{3})(\\d+)", with: "($1) $2-$3", options: .regularExpression, range: nil)
     }
 }
