@@ -1296,6 +1296,118 @@ public final class YouMayLikeQuery: GraphQLQuery {
   }
 }
 
+public final class SearchQuery: GraphQLQuery {
+  /// The raw GraphQL definition of this operation.
+  public let operationDefinition: String =
+    """
+    query Search($query: String!) {
+      search(query: $query) {
+        __typename
+        yelpId
+        name
+        address
+      }
+    }
+    """
+
+  public let operationName: String = "Search"
+
+  public var query: String
+
+  public init(query: String) {
+    self.query = query
+  }
+
+  public var variables: GraphQLMap? {
+    return ["query": query]
+  }
+
+  public struct Data: GraphQLSelectionSet {
+    public static let possibleTypes: [String] = ["Query"]
+
+    public static let selections: [GraphQLSelection] = [
+      GraphQLField("search", arguments: ["query": GraphQLVariable("query")], type: .nonNull(.list(.nonNull(.object(Search.selections))))),
+    ]
+
+    public private(set) var resultMap: ResultMap
+
+    public init(unsafeResultMap: ResultMap) {
+      self.resultMap = unsafeResultMap
+    }
+
+    public init(search: [Search]) {
+      self.init(unsafeResultMap: ["__typename": "Query", "search": search.map { (value: Search) -> ResultMap in value.resultMap }])
+    }
+
+    /// Search for restaurants.
+    public var search: [Search] {
+      get {
+        return (resultMap["search"] as! [ResultMap]).map { (value: ResultMap) -> Search in Search(unsafeResultMap: value) }
+      }
+      set {
+        resultMap.updateValue(newValue.map { (value: Search) -> ResultMap in value.resultMap }, forKey: "search")
+      }
+    }
+
+    public struct Search: GraphQLSelectionSet {
+      public static let possibleTypes: [String] = ["YelpSearchResult"]
+
+      public static let selections: [GraphQLSelection] = [
+        GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+        GraphQLField("yelpId", type: .nonNull(.scalar(String.self))),
+        GraphQLField("name", type: .nonNull(.scalar(String.self))),
+        GraphQLField("address", type: .nonNull(.scalar(String.self))),
+      ]
+
+      public private(set) var resultMap: ResultMap
+
+      public init(unsafeResultMap: ResultMap) {
+        self.resultMap = unsafeResultMap
+      }
+
+      public init(yelpId: String, name: String, address: String) {
+        self.init(unsafeResultMap: ["__typename": "YelpSearchResult", "yelpId": yelpId, "name": name, "address": address])
+      }
+
+      public var __typename: String {
+        get {
+          return resultMap["__typename"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      public var yelpId: String {
+        get {
+          return resultMap["yelpId"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "yelpId")
+        }
+      }
+
+      public var name: String {
+        get {
+          return resultMap["name"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "name")
+        }
+      }
+
+      public var address: String {
+        get {
+          return resultMap["address"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "address")
+        }
+      }
+    }
+  }
+}
+
 public final class CreateBucketListItemMutation: GraphQLMutation {
   /// The raw GraphQL definition of this operation.
   public let operationDefinition: String =

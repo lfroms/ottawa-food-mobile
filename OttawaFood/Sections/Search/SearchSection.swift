@@ -23,12 +23,30 @@ struct SearchSection: View {
                     readOnly: false,
                     primaryIcon: "magnifyingglass",
                     auxiliaryIcon: "xmark",
-                    auxiliaryAction: searchSectionState.togglePresentation
+                    commitAction: {},
+                    auxiliaryAction: self.didPerformDismiss
                 )
                 .padding(20)
 
-                RestaurantPicker()
+                if !searchSectionState.query.isEmpty {
+                    RestaurantPicker(
+                        query: searchSectionState.query,
+                        loading: searchSectionState.loading,
+                        items: searchSectionState.results
+                    )
+                }
             }
+        }
+    }
+
+    private func didPerformDismiss() {
+        if searchSectionState.query.isEmpty {
+            searchSectionState.togglePresentation()
+            searchSectionState.query = ""
+            searchSectionState.results = []
+        } else {
+            searchSectionState.query = ""
+            searchSectionState.results = []
         }
     }
 }

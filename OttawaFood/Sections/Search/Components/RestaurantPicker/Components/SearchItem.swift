@@ -8,34 +8,39 @@
 
 import SwiftUI
 
-struct SearachItem<Content: View>: View {
+struct SearchItem<Content: View>: View {
     var color: Color
-    var action: () -> Void
     var content: () -> Content
 
-    @inlinable init(color: Color? = nil, action: @escaping () -> Void, @ViewBuilder content: @escaping () -> Content) {
-        self.color = color ?? Color(white: 0.09)
-        self.action = action
+    @inlinable init(color: Color? = nil, @ViewBuilder content: @escaping () -> Content) {
+        self.color = color ?? .white
         self.content = content
     }
 
     var body: some View {
-        Button(action: self.action) {
-            HStack(alignment: .center, spacing: 20) {
-                content()
-            }
-            .padding(.horizontal, 20)
-            .frame(height: 50)
-            .background(color)
-            .cornerRadius(14)
+        HStack(alignment: .center, spacing: 14) {
+            Image(systemName: "mappin.and.ellipse")
+                .font(Font.callout.weight(.bold))
+
+            content()
+
+            Spacer(minLength: 0)
+
+            Image(systemName: "chevron.right")
+                .font(Font.callout.weight(.bold))
+                .foregroundColor(.secondary)
         }
-        .buttonStyle(PlainButtonStyle())
+        .padding(.horizontal, 20)
+        .frame(height: 57)
+        .background(color)
+        .cornerRadius(14)
+        .shadow(color: Color.black.opacity(0.18), radius: 6, x: 0, y: 2)
     }
 }
 
-struct SearachItemButton_Previews: PreviewProvider {
+struct SearchItemButton_Previews: PreviewProvider {
     static var previews: some View {
-        SearachItem(action: {}) {
+        SearchItem {
             Text("Test")
         }
     }

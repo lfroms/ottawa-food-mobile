@@ -83,8 +83,12 @@
 		80CE93522444E7A100BA33C9 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE93512444E7A100BA33C9 /* SearchBar.swift */; };
 		80CE93542444E7E000BA33C9 /* SearchBarTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE93532444E7E000BA33C9 /* SearchBarTextField.swift */; };
 		80CE93562444E81000BA33C9 /* SearchBarPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE93552444E81000BA33C9 /* SearchBarPlaceholder.swift */; };
+		80CE93582445096700BA33C9 /* Search.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 80CE93572445096700BA33C9 /* Search.graphql */; };
 		80F942D8244299A6003B5A49 /* ForYouSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F942D7244299A6003B5A49 /* ForYouSection.swift */; };
 		80F942DB244299D3003B5A49 /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F942DA244299D3003B5A49 /* AppServices.swift */; };
+		80FCD23524450F6900D0B0CF /* AppActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FCD23424450F6900D0B0CF /* AppActivityIndicator.swift */; };
+		80FCD23724450F9600D0B0CF /* IndicatorShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FCD23624450F9600D0B0CF /* IndicatorShape.swift */; };
+		80FCD23A244511BB00D0B0CF /* NSObject+Debounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FCD239244511BB00D0B0CF /* NSObject+Debounce.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -165,10 +169,14 @@
 		80CE93512444E7A100BA33C9 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		80CE93532444E7E000BA33C9 /* SearchBarTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarTextField.swift; sourceTree = "<group>"; };
 		80CE93552444E81000BA33C9 /* SearchBarPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarPlaceholder.swift; sourceTree = "<group>"; };
+		80CE93572445096700BA33C9 /* Search.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Search.graphql; sourceTree = "<group>"; };
 		80EFD1DA2443A29000F2EDCC /* OttawaFavorites.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = OttawaFavorites.graphql; sourceTree = "<group>"; };
 		80EFD1DB2443A29200F2EDCC /* OttawaFavoritesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OttawaFavoritesService.swift; sourceTree = "<group>"; };
 		80F942D7244299A6003B5A49 /* ForYouSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouSection.swift; sourceTree = "<group>"; };
 		80F942DA244299D3003B5A49 /* AppServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServices.swift; sourceTree = "<group>"; };
+		80FCD23424450F6900D0B0CF /* AppActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppActivityIndicator.swift; sourceTree = "<group>"; };
+		80FCD23624450F9600D0B0CF /* IndicatorShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorShape.swift; sourceTree = "<group>"; };
+		80FCD239244511BB00D0B0CF /* NSObject+Debounce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Debounce.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +211,7 @@
 		800254F5243EA6B30026B7C8 /* OttawaFood */ = {
 			isa = PBXGroup;
 			children = (
+				80FCD238244511B100D0B0CF /* Extensions */,
 				808AFC4024439A1800550386 /* GraphQL */,
 				80F942D324429936003B5A49 /* Application */,
 				80F942D224429914003B5A49 /* Views */,
@@ -324,6 +333,7 @@
 			children = (
 				808AFBF324429E1000550386 /* AppState.swift */,
 				80CE934F2444E5AD00BA33C9 /* SearchSectionState.swift */,
+				80CE93572445096700BA33C9 /* Search.graphql */,
 			);
 			path = States;
 			sourceTree = "<group>";
@@ -627,6 +637,7 @@
 		80F942D224429914003B5A49 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				80FCD23324450F5D00D0B0CF /* ActivityIndicator */,
 				80CE93372444D5F200BA33C9 /* TopBar */,
 				80CE932E2444CF1400BA33C9 /* RecommendationRows */,
 				800996CC2443AA5F002A63F1 /* ButtonStyles */,
@@ -693,6 +704,23 @@
 				808AFBEB24429AD600550386 /* SectionHeader.swift */,
 			);
 			path = SectionHeader;
+			sourceTree = "<group>";
+		};
+		80FCD23324450F5D00D0B0CF /* ActivityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				80FCD23424450F6900D0B0CF /* AppActivityIndicator.swift */,
+				80FCD23624450F9600D0B0CF /* IndicatorShape.swift */,
+			);
+			path = ActivityIndicator;
+			sourceTree = "<group>";
+		};
+		80FCD238244511B100D0B0CF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				80FCD239244511BB00D0B0CF /* NSObject+Debounce.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -769,6 +797,7 @@
 				80CE932B2444CE9300BA33C9 /* YouMayLike.graphql in Resources */,
 				80025503243EA6B40026B7C8 /* LaunchScreen.storyboard in Resources */,
 				800996F82443EBBF002A63F1 /* DeleteBucketListItem.graphql in Resources */,
+				80CE93582445096700BA33C9 /* Search.graphql in Resources */,
 				800996F62443EBB9002A63F1 /* CreateBucketListItem.graphql in Resources */,
 				80025500243EA6B40026B7C8 /* Preview Assets.xcassets in Resources */,
 				800254FD243EA6B40026B7C8 /* Assets.xcassets in Resources */,
@@ -827,6 +856,7 @@
 				80CE93522444E7A100BA33C9 /* SearchBar.swift in Sources */,
 				800996CB2443A499002A63F1 /* TouchScaleButton.swift in Sources */,
 				808AFC162442A82700550386 /* FeaturedSection.swift in Sources */,
+				80FCD23524450F6900D0B0CF /* AppActivityIndicator.swift in Sources */,
 				808AFBF124429D4E00550386 /* AppSection.swift in Sources */,
 				80CE93542444E7E000BA33C9 /* SearchBarTextField.swift in Sources */,
 				80CE93452444E41300BA33C9 /* RestaurantPicker.swift in Sources */,
@@ -835,8 +865,10 @@
 				80CE93342444D01400BA33C9 /* MyBucketListSectionContainer.swift in Sources */,
 				808AFC192442A86200550386 /* RestaurantItem.swift in Sources */,
 				800996F22443E0E3002A63F1 /* RestaurantViewService.swift in Sources */,
+				80FCD23724450F9600D0B0CF /* IndicatorShape.swift in Sources */,
 				808AFBF424429E1000550386 /* AppState.swift in Sources */,
 				808AFC5424439BC400550386 /* TrendingService.swift in Sources */,
+				80FCD23A244511BB00D0B0CF /* NSObject+Debounce.swift in Sources */,
 				80CE93502444E5AD00BA33C9 /* SearchSectionState.swift in Sources */,
 				808AFC0E2442A70900550386 /* PageView.swift in Sources */,
 				808AFBFC24429EF500550386 /* TabBarItem.swift in Sources */,

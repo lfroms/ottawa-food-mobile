@@ -12,5 +12,6 @@ import Foundation
 struct RestaurantItem: Equatable, Hashable {
     let text: String
     let imageUrl: URL?
+    var address: String?
     let targetObjectId: GraphQLID
 }

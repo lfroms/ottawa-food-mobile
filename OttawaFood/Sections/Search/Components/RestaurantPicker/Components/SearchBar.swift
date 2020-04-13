@@ -15,6 +15,7 @@ struct SearchBar: View, Equatable {
     var primaryIcon: String
     var auxiliaryIcon: String
 
+    var commitAction: () -> Void
     var auxiliaryAction: () -> Void
 
     var body: some View {
@@ -22,7 +23,7 @@ struct SearchBar: View, Equatable {
             Image(systemName: primaryIcon)
                 .equatable()
 
-            SearchBarTextField(text: $textFieldValue, placeholder: SearchBarPlaceholder())
+            SearchBarTextField(text: $textFieldValue, placeholder: SearchBarPlaceholder(), commit: commitAction)
                 .equatable()
                 .disabled(readOnly)
 
@@ -59,6 +60,7 @@ struct SearchBar_Previews: PreviewProvider {
                 readOnly: false,
                 primaryIcon: "magnifyingglass",
                 auxiliaryIcon: "xmark.circle.fill",
+                commitAction: {},
                 auxiliaryAction: {}
             )
             .padding(20)

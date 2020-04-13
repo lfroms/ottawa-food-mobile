@@ -24,7 +24,7 @@ struct SearchSubsection<Content: View>: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
+        VStack(alignment: .leading, spacing: 16) {
             HStack(alignment: .firstTextBaseline, spacing: 12) {
                 HStack(alignment: .firstTextBaseline, spacing: 0) {
                     Text(label)
@@ -42,8 +42,7 @@ struct SearchSubsection<Content: View>: View {
                 Spacer()
 
                 if loading {
-//                    AppActivityIndicator()
-                    Text("loading")
+                    AppActivityIndicator()
                 }
             }
 

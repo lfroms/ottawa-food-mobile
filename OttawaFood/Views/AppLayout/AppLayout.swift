@@ -31,8 +31,8 @@ struct AppLayout: View {
             .navigationBarHidden(true)
             .navigationBarTitle("")
             .navigationBarBackButtonHidden(true)
+            .overlay(SearchModal())
         }
-        .overlay(SearchModal())
     }
 }
 
