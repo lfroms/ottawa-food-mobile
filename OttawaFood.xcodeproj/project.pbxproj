@@ -65,6 +65,7 @@
 		808AFC5624439BD300550386 /* Trending.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 808AFC5524439BD300550386 /* Trending.graphql */; };
 		808AFC5924439C8000550386 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFC5824439C8000550386 /* API.swift */; };
 		80CE93192443F7A100BA33C9 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 80CE93182443F7A100BA33C9 /* URLImage */; };
+		80CE931D2443FC6E00BA33C9 /* CurrentUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE931B2443FC5500BA33C9 /* CurrentUserService.swift */; };
 		80F942D8244299A6003B5A49 /* ForYouSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F942D7244299A6003B5A49 /* ForYouSection.swift */; };
 		80F942DB244299D3003B5A49 /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F942DA244299D3003B5A49 /* AppServices.swift */; };
 /* End PBXBuildFile section */
@@ -128,6 +129,8 @@
 		808AFC5324439BC400550386 /* TrendingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingService.swift; sourceTree = "<group>"; };
 		808AFC5524439BD300550386 /* Trending.graphql */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = Trending.graphql; sourceTree = "<group>"; tabWidth = 2; };
 		808AFC5824439C8000550386 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		80CE931B2443FC5500BA33C9 /* CurrentUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserService.swift; sourceTree = "<group>"; };
+		80CE931C2443FC5500BA33C9 /* CurrentUser.graphql */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = CurrentUser.graphql; sourceTree = "<group>"; tabWidth = 2; };
 		80EFD1DA2443A29000F2EDCC /* OttawaFavorites.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = OttawaFavorites.graphql; sourceTree = "<group>"; };
 		80EFD1DB2443A29200F2EDCC /* OttawaFavoritesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OttawaFavoritesService.swift; sourceTree = "<group>"; };
 		80F942D7244299A6003B5A49 /* ForYouSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouSection.swift; sourceTree = "<group>"; };
@@ -442,6 +445,7 @@
 		808AFC5124439B9400550386 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				80CE931A2443FC4F00BA33C9 /* Favorites */,
 				800996CF2443AFD1002A63F1 /* Featured */,
 				80EFD1D92443A28A00F2EDCC /* OttawaFavorites */,
 				808AFC5224439BAB00550386 /* Trending */,
@@ -456,6 +460,15 @@
 				808AFC5524439BD300550386 /* Trending.graphql */,
 			);
 			path = Trending;
+			sourceTree = "<group>";
+		};
+		80CE931A2443FC4F00BA33C9 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				80CE931B2443FC5500BA33C9 /* CurrentUserService.swift */,
+				80CE931C2443FC5500BA33C9 /* CurrentUser.graphql */,
+			);
+			path = Favorites;
 			sourceTree = "<group>";
 		};
 		80EFD1D92443A28A00F2EDCC /* OttawaFavorites */ = {
@@ -642,6 +655,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80CE931D2443FC6E00BA33C9 /* CurrentUserService.swift in Sources */,
 				800996D22443B01C002A63F1 /* FeaturedService.swift in Sources */,
 				800996C82443A3EE002A63F1 /* OttawaFavoritesService.swift in Sources */,
 				808AFC322442B7D900550386 /* TrendingSection.swift in Sources */,
