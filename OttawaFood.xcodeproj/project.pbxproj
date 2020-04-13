@@ -50,10 +50,6 @@
 		808AFC162442A82700550386 /* FeaturedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFC152442A82700550386 /* FeaturedSection.swift */; };
 		808AFC192442A86200550386 /* RestaurantItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFC182442A86200550386 /* RestaurantItem.swift */; };
 		808AFC1C2442A8D300550386 /* FeaturedCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFC1B2442A8D300550386 /* FeaturedCard.swift */; };
-		808AFC1F2442AB0600550386 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFC1E2442AB0600550386 /* ImageLoader.swift */; };
-		808AFC212442AB1B00550386 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFC202442AB1B00550386 /* AsyncImage.swift */; };
-		808AFC242442AB8300550386 /* TemporaryImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFC232442AB8300550386 /* TemporaryImageCache.swift */; };
-		808AFC262442ABCF00550386 /* ImageCacheKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFC252442ABCF00550386 /* ImageCacheKey.swift */; };
 		808AFC292442B36E00550386 /* LabeledSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFC282442B36E00550386 /* LabeledSection.swift */; };
 		808AFC2D2442B4EA00550386 /* RestaurantCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFC2C2442B4EA00550386 /* RestaurantCard.swift */; };
 		808AFC302442B7D200550386 /* TrendingSectionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFC2F2442B7D200550386 /* TrendingSectionContainer.swift */; };
@@ -68,6 +64,7 @@
 		808AFC5424439BC400550386 /* TrendingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFC5324439BC400550386 /* TrendingService.swift */; };
 		808AFC5624439BD300550386 /* Trending.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 808AFC5524439BD300550386 /* Trending.graphql */; };
 		808AFC5924439C8000550386 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFC5824439C8000550386 /* API.swift */; };
+		80CE93192443F7A100BA33C9 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 80CE93182443F7A100BA33C9 /* URLImage */; };
 		80F942D8244299A6003B5A49 /* ForYouSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F942D7244299A6003B5A49 /* ForYouSection.swift */; };
 		80F942DB244299D3003B5A49 /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F942DA244299D3003B5A49 /* AppServices.swift */; };
 /* End PBXBuildFile section */
@@ -118,10 +115,6 @@
 		808AFC152442A82700550386 /* FeaturedSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedSection.swift; sourceTree = "<group>"; };
 		808AFC182442A86200550386 /* RestaurantItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantItem.swift; sourceTree = "<group>"; };
 		808AFC1B2442A8D300550386 /* FeaturedCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCard.swift; sourceTree = "<group>"; };
-		808AFC1E2442AB0600550386 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
-		808AFC202442AB1B00550386 /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
-		808AFC232442AB8300550386 /* TemporaryImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporaryImageCache.swift; sourceTree = "<group>"; };
-		808AFC252442ABCF00550386 /* ImageCacheKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheKey.swift; sourceTree = "<group>"; };
 		808AFC282442B36E00550386 /* LabeledSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledSection.swift; sourceTree = "<group>"; };
 		808AFC2C2442B4EA00550386 /* RestaurantCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCard.swift; sourceTree = "<group>"; };
 		808AFC2F2442B7D200550386 /* TrendingSectionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingSectionContainer.swift; sourceTree = "<group>"; };
@@ -146,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80CE93192443F7A100BA33C9 /* URLImage in Frameworks */,
 				808AFC4E24439AC700550386 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,7 +168,6 @@
 			children = (
 				808AFC4024439A1800550386 /* GraphQL */,
 				80F942D324429936003B5A49 /* Application */,
-				808AFC222442AB7000550386 /* Caches */,
 				80F942D224429914003B5A49 /* Views */,
 				80F942D524429990003B5A49 /* Sections */,
 				800254FC243EA6B40026B7C8 /* Assets.xcassets */,
@@ -385,24 +378,6 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		808AFC1D2442AAF900550386 /* AsyncImage */ = {
-			isa = PBXGroup;
-			children = (
-				808AFC1E2442AB0600550386 /* ImageLoader.swift */,
-				808AFC202442AB1B00550386 /* AsyncImage.swift */,
-			);
-			path = AsyncImage;
-			sourceTree = "<group>";
-		};
-		808AFC222442AB7000550386 /* Caches */ = {
-			isa = PBXGroup;
-			children = (
-				808AFC232442AB8300550386 /* TemporaryImageCache.swift */,
-				808AFC252442ABCF00550386 /* ImageCacheKey.swift */,
-			);
-			path = Caches;
-			sourceTree = "<group>";
-		};
 		808AFC272442B35B00550386 /* LabeledSection */ = {
 			isa = PBXGroup;
 			children = (
@@ -502,7 +477,6 @@
 				808AFC0A2442A6CF00550386 /* PageView */,
 				808AFBED24429CB700550386 /* TabBar */,
 				80F942D9244299AC003B5A49 /* SectionHeader */,
-				808AFC1D2442AAF900550386 /* AsyncImage */,
 				808AFC272442B35B00550386 /* LabeledSection */,
 			);
 			path = Views;
@@ -580,6 +554,7 @@
 			name = OttawaFood;
 			packageProductDependencies = (
 				808AFC4D24439AC700550386 /* Apollo */,
+				80CE93182443F7A100BA33C9 /* URLImage */,
 			);
 			productName = OttawaFood;
 			productReference = 800254F3243EA6B30026B7C8 /* OttawaFood.app */;
@@ -611,6 +586,7 @@
 			mainGroup = 800254EA243EA6B30026B7C8;
 			packageReferences = (
 				808AFC4C24439AC700550386 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				80CE93172443F7A100BA33C9 /* XCRemoteSwiftPackageReference "url-image" */,
 			);
 			productRefGroup = 800254F4243EA6B30026B7C8 /* Products */;
 			projectDirPath = "";
@@ -692,14 +668,12 @@
 				808AFBFC24429EF500550386 /* TabBarItem.swift in Sources */,
 				808AFBEC24429AD600550386 /* SectionHeader.swift in Sources */,
 				800996E02443C49A002A63F1 /* RootHostingController.swift in Sources */,
-				808AFC262442ABCF00550386 /* ImageCacheKey.swift in Sources */,
 				808AFC102442A7D700550386 /* PageControl.swift in Sources */,
 				80F942DB244299D3003B5A49 /* AppServices.swift in Sources */,
 				800996EB2443C889002A63F1 /* FloatingButton.swift in Sources */,
 				808AFC052442A50F00550386 /* FavoritesSection.swift in Sources */,
 				808AFC2D2442B4EA00550386 /* RestaurantCard.swift in Sources */,
 				800996FC2443EFFC002A63F1 /* RestaurantViewIconDetail.swift in Sources */,
-				808AFC1F2442AB0600550386 /* ImageLoader.swift in Sources */,
 				800996E52443C609002A63F1 /* RestaurantViewTopSpacer.swift in Sources */,
 				800996E32443C5AB002A63F1 /* RestaurantViewBackButton.swift in Sources */,
 				808AFC372443969900550386 /* ScrollableStackLabeledSection.swift in Sources */,
@@ -708,7 +682,6 @@
 				80F942D8244299A6003B5A49 /* ForYouSection.swift in Sources */,
 				808AFC302442B7D200550386 /* TrendingSectionContainer.swift in Sources */,
 				808AFBEF24429CC500550386 /* TabBar.swift in Sources */,
-				808AFC242442AB8300550386 /* TemporaryImageCache.swift in Sources */,
 				808AFBFE2442A47100550386 /* CurrentSectionContainer.swift in Sources */,
 				800996D52443B3A7002A63F1 /* RestaurantView.swift in Sources */,
 				808AFC3A2443978500550386 /* OttawaFavoritesSectionContainer.swift in Sources */,
@@ -717,7 +690,6 @@
 				800996CE2443AA6B002A63F1 /* ShrinkOnPressButtonStyle.swift in Sources */,
 				808AFC0C2442A6E500550386 /* PageViewController.swift in Sources */,
 				808AFC092442A51D00550386 /* ProfileSection.swift in Sources */,
-				808AFC212442AB1B00550386 /* AsyncImage.swift in Sources */,
 				808AFC002442A47E00550386 /* CurrentSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -922,6 +894,14 @@
 				version = 0.25.0;
 			};
 		};
+		80CE93172443F7A100BA33C9 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = exactVersion;
+				version = 0.9.13;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -929,6 +909,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 808AFC4C24439AC700550386 /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = Apollo;
+		};
+		80CE93182443F7A100BA33C9 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 80CE93172443F7A100BA33C9 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

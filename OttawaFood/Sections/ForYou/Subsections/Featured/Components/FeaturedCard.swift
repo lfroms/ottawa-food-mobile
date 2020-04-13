@@ -7,18 +7,21 @@
 //
 
 import SwiftUI
+import URLImage
 
 struct FeaturedCard: View {
-    @Environment(\.imageCache) private var cache: ImageCache
-
     let data: RestaurantItem
 
     var body: some View {
         ZStack(alignment: .bottomLeading) {
             if data.imageUrl != nil {
-                AsyncImage(url: data.imageUrl!, placeholder: Color.gray.opacity(0.5), cache: self.cache)
-                    .frame(minHeight: 216, maxHeight: 216)
-                    .aspectRatio(2 / 3, contentMode: .fill)
+                URLImage(data.imageUrl!) {
+                    $0.image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .clipped()
+                }
+                .frame(minHeight: 216, maxHeight: 216)
             }
 
             LinearGradient(

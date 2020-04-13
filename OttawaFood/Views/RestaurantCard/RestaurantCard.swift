@@ -7,10 +7,9 @@
 //
 
 import SwiftUI
+import URLImage
 
 struct RestaurantCard: View {
-    @Environment(\.imageCache) private var cache: ImageCache
-
     let text: String
     let imageUrl: URL?
     let size: CGSize
@@ -18,9 +17,13 @@ struct RestaurantCard: View {
     var body: some View {
         ZStack(alignment: .bottomLeading) {
             if imageUrl != nil {
-                AsyncImage(url: imageUrl!, placeholder: Color.gray.opacity(0.5), cache: self.cache)
-                    .frame(width: size.width, height: size.height)
-                    .aspectRatio(2 / 3, contentMode: .fill)
+                URLImage(imageUrl!) {
+                    $0.image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .clipped()
+                }
+                .frame(width: size.width, height: size.height)
             }
 
             LinearGradient(

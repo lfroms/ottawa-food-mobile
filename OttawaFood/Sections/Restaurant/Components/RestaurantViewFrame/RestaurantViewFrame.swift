@@ -7,31 +7,46 @@
 //
 
 import SwiftUI
+import URLImage
 
 struct RestaurantViewFrame<Content: View>: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @Environment(\.localStatusBarStyle) private var statusBarStyle
-    @Environment(\.imageCache) private var cache: ImageCache
 
     private var imageUrl: URL?
     private var backButtonText: String
     private var content: () -> Content
 
     @inlinable init(
-        imageUrl: URL?,
+        imageUrlString: String?,
         backButtonText: String,
         @ViewBuilder content: @escaping () -> Content
     ) {
-        self.imageUrl = imageUrl
+        self.imageUrl = URL(string: imageUrlString ?? "")
         self.backButtonText = backButtonText
         self.content = content
     }
 
     var body: some View {
         ZStack(alignment: .topLeading) {
-            AsyncImage(url: imageUrl ?? URL(string: "http://apple.com")!, placeholder: Color.gray, cache: cache)
+            if imageUrl != nil {
+                URLImage(imageUrl!) { component in
+                    GeometryReader { geometry in
+                        component.image
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: geometry.size.width, height: 300)
+                            .clipped()
+                    }
+                }
                 .frame(height: 300)
                 .edgesIgnoringSafeArea(.top)
+
+            } else {
+                Color.gray
+                    .frame(height: 300)
+                    .edgesIgnoringSafeArea(.top)
+            }
 
             LinearGradient(
                 gradient: Gradient(colors: [Color.black.opacity(1), Color.black.opacity(0)]),
@@ -70,7 +85,7 @@ struct RestaurantViewFrame<Content: View>: View {
 
 struct RestaurantViewFrame_Previews: PreviewProvider {
     static var previews: some View {
-        RestaurantViewFrame(imageUrl: nil, backButtonText: "Back") {
+        RestaurantViewFrame(imageUrlString: nil, backButtonText: "Back") {
             Text("Content")
         }
     }

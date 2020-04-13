@@ -15,7 +15,7 @@ struct RestaurantView: View {
 
     var body: some View {
         RestaurantViewFrame(
-            imageUrl: URL(string: service.restaurant?.imageUrl ?? ""),
+            imageUrlString: service.restaurant?.imageUrl,
             backButtonText: restaurant.text
         ) {
             VStack(alignment: .leading, spacing: 30) {
