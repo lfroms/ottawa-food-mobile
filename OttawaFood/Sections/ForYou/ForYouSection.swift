@@ -12,13 +12,10 @@ struct ForYouSection: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 30) {
             FeaturedSectionContainer()
-                .padding(.top, 14)
-
             TrendingSectionContainer()
             OttawaFavoritesSectionContainer()
             YouMayLikeRecommendationRow()
         }
-        .navigationBarTitle(Text(AppSection.forYou.name))
     }
 }
 

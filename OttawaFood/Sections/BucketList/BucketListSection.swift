@@ -14,7 +14,6 @@ struct BucketListSection: View {
             MyBucketListSectionContainer()
             YouMayLikeRecommendationRow()
         }
-        .navigationBarTitle(Text(AppSection.bucketList.name))
     }
 }
 

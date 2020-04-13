@@ -11,14 +11,26 @@ import SwiftUI
 struct AppLayout: View {
     var body: some View {
         NavigationView {
-            ZStack(alignment: .bottom) {
-                ScrollView(.vertical, showsIndicators: false) {
-                    CurrentSectionContainer()
-                }
-                .navigationBarItems(trailing: Text("search"))
+            VStack(spacing: 0) {
+                Color.white.edgesIgnoringSafeArea(.top).frame(height: 1)
 
-                TabBarContainer()
+                ZStack(alignment: .bottom) {
+                    ScrollView(.vertical, showsIndicators: false) {
+                        VStack(alignment: .leading, spacing: 5) {
+                            TopBar()
+                                .padding(20)
+
+                            CurrentSectionContainer()
+                        }
+                    }
+                    .navigationBarItems(trailing: Text("search"))
+
+                    TabBarContainer()
+                }
             }
+            .navigationBarHidden(true)
+            .navigationBarTitle("")
+            .navigationBarBackButtonHidden(true)
         }
     }
 }

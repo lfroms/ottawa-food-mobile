@@ -20,7 +20,7 @@ struct MyFavoritesSection: View {
                 .buttonStyle(ShrinkOnPressButtonStyle())
             }
         }
-        .padding([.top, .leading, .trailing], 20)
+        .padding(.horizontal, 20)
     }
 }
 

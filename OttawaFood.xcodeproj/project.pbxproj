@@ -73,6 +73,7 @@
 		80CE93302444CF2700BA33C9 /* YouMayLikeRecommendationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE932F2444CF2700BA33C9 /* YouMayLikeRecommendationRow.swift */; };
 		80CE93342444D01400BA33C9 /* MyBucketListSectionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE93332444D01400BA33C9 /* MyBucketListSectionContainer.swift */; };
 		80CE93362444D01D00BA33C9 /* MyBucketListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE93352444D01D00BA33C9 /* MyBucketListSection.swift */; };
+		80CE93392444D60900BA33C9 /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE93382444D60900BA33C9 /* TopBar.swift */; };
 		80F942D8244299A6003B5A49 /* ForYouSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F942D7244299A6003B5A49 /* ForYouSection.swift */; };
 		80F942DB244299D3003B5A49 /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F942DA244299D3003B5A49 /* AppServices.swift */; };
 /* End PBXBuildFile section */
@@ -145,6 +146,7 @@
 		80CE932F2444CF2700BA33C9 /* YouMayLikeRecommendationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouMayLikeRecommendationRow.swift; sourceTree = "<group>"; };
 		80CE93332444D01400BA33C9 /* MyBucketListSectionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBucketListSectionContainer.swift; sourceTree = "<group>"; };
 		80CE93352444D01D00BA33C9 /* MyBucketListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBucketListSection.swift; sourceTree = "<group>"; };
+		80CE93382444D60900BA33C9 /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
 		80EFD1DA2443A29000F2EDCC /* OttawaFavorites.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = OttawaFavorites.graphql; sourceTree = "<group>"; };
 		80EFD1DB2443A29200F2EDCC /* OttawaFavoritesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OttawaFavoritesService.swift; sourceTree = "<group>"; };
 		80F942D7244299A6003B5A49 /* ForYouSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouSection.swift; sourceTree = "<group>"; };
@@ -539,6 +541,14 @@
 			path = MyBucketList;
 			sourceTree = "<group>";
 		};
+		80CE93372444D5F200BA33C9 /* TopBar */ = {
+			isa = PBXGroup;
+			children = (
+				80CE93382444D60900BA33C9 /* TopBar.swift */,
+			);
+			path = TopBar;
+			sourceTree = "<group>";
+		};
 		80EFD1D92443A28A00F2EDCC /* OttawaFavorites */ = {
 			isa = PBXGroup;
 			children = (
@@ -551,6 +561,7 @@
 		80F942D224429914003B5A49 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				80CE93372444D5F200BA33C9 /* TopBar */,
 				80CE932E2444CF1400BA33C9 /* RecommendationRows */,
 				800996CC2443AA5F002A63F1 /* ButtonStyles */,
 				800996C92443A487002A63F1 /* TouchScale */,
@@ -759,6 +770,7 @@
 				808AFBEC24429AD600550386 /* SectionHeader.swift in Sources */,
 				800996E02443C49A002A63F1 /* RootHostingController.swift in Sources */,
 				808AFC102442A7D700550386 /* PageControl.swift in Sources */,
+				80CE93392444D60900BA33C9 /* TopBar.swift in Sources */,
 				80F942DB244299D3003B5A49 /* AppServices.swift in Sources */,
 				800996EB2443C889002A63F1 /* FloatingButton.swift in Sources */,
 				808AFC052442A50F00550386 /* FavoritesSection.swift in Sources */,
