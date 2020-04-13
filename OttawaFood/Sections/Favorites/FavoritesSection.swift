@@ -14,7 +14,6 @@ struct FavoritesSection: View {
             MyFavoritesSectionContainer()
             AlsoLikeSectionContainer()
         }
-        .padding(20)
         .navigationBarTitle(Text(AppSection.favorites.name))
     }
 }
