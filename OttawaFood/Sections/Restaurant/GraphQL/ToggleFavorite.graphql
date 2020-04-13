@@ -1,5 +1,5 @@
-mutation ToggleFavorite($restaurantId: ID!) {
-  toggleFavoriteRestaurant(input: {id: $restaurantId}) {
+mutation ToggleFavorite($yelpId: ID!) {
+  toggleFavoriteRestaurant(input: {yelpId: $yelpId}) {
     restaurant {
       favorite
     }

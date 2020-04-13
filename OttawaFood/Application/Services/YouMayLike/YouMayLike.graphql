@@ -5,6 +5,7 @@ query YouMayLike {
       index
       restaurant {
         id
+        yelpId
         name
         imageUrl
       }

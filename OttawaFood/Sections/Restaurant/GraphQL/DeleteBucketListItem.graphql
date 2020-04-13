@@ -1,5 +1,5 @@
-mutation DeleteBucketListItem($restaurantId: ID!) {
-  deleteBucketListItem(input: {restaurantId: $restaurantId}) {
+mutation DeleteBucketListItem($yelpId: ID!) {
+  deleteBucketListItem(input: {yelpId: $yelpId}) {
     bucketListItem {
       id
       status

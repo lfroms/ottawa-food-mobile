@@ -3,6 +3,7 @@ query CurrentUser {
     favoriteRestaurants {
       nodes {
         id
+        yelpId
         name
         imageUrl
       }
@@ -11,6 +12,7 @@ query CurrentUser {
       nodes {
         restaurant {
           id
+          yelpId
           name
           imageUrl
         }

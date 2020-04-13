@@ -14,7 +14,7 @@ final class RestaurantViewService: ObservableObject {
     @Published private(set) var bucketListed: Bool = false
 
     public func fetch(id: GraphQLID) {
-        let query = RestaurantQuery(id: id)
+        let query = RestaurantQuery(yelpId: id)
 
         GraphQL.shared.apollo.fetch(query: query, cachePolicy: .returnCacheDataAndFetch) { result in
             switch result {
@@ -31,7 +31,7 @@ final class RestaurantViewService: ObservableObject {
     }
 
     public func toggleFavorite(id: GraphQLID) {
-        let mutation = ToggleFavoriteMutation(restaurantId: id)
+        let mutation = ToggleFavoriteMutation(yelpId: id)
 
         GraphQL.shared.apollo.perform(mutation: mutation) { result in
             switch result {
@@ -55,7 +55,7 @@ final class RestaurantViewService: ObservableObject {
     }
 
     private func createBucketListItem(id: GraphQLID) {
-        let mutation = CreateBucketListItemMutation(restaurantId: id)
+        let mutation = CreateBucketListItemMutation(yelpId: id)
 
         GraphQL.shared.apollo.perform(mutation: mutation) { result in
             switch result {
@@ -71,7 +71,7 @@ final class RestaurantViewService: ObservableObject {
     }
 
     private func deleteBucketListItem(id: GraphQLID) {
-        let mutation = DeleteBucketListItemMutation(restaurantId: id)
+        let mutation = DeleteBucketListItemMutation(yelpId: id)
 
         GraphQL.shared.apollo.perform(mutation: mutation) { result in
             switch result {

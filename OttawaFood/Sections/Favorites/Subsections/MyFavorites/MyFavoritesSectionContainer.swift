@@ -31,7 +31,7 @@ struct MyFavoritesSectionContainer: View {
                 url = URL(string: imageUrl)!
             }
 
-            return RestaurantItem(text: node.name, imageUrl: url, targetObjectId: node.id)
+            return RestaurantItem(text: node.name ?? "", imageUrl: url, targetObjectId: node.yelpId)
         }
     }
 }

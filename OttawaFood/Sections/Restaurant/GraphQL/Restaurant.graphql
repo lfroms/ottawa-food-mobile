@@ -1,6 +1,7 @@
-query Restaurant($id: ID!) {
-  restaurant(id: $id) {
+query Restaurant($yelpId: ID!) {
+  restaurant(yelpId: $yelpId) {
     id
+    yelpId
     name
     imageUrl
     yelpUrl

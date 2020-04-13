@@ -144,7 +144,7 @@
             "description": "Retrieve details about a particular restaurant.",
             "args": [
               {
-                "name": "id",
+                "name": "yelpId",
                 "description": null,
                 "type": {
                   "kind": "NON_NULL",
@@ -162,6 +162,45 @@
               "kind": "OBJECT",
               "name": "Restaurant",
               "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "search",
+            "description": "Search for restaurants.",
+            "args": [
+              {
+                "name": "query",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "YelpSearchResult",
+                    "ofType": null
+                  }
+                }
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -679,13 +718,9 @@
             "description": null,
             "args": [],
             "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              }
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -1276,6 +1311,65 @@
       },
       {
         "kind": "OBJECT",
+        "name": "YelpSearchResult",
+        "description": null,
+        "fields": [
+          {
+            "name": "address",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "name",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "yelpId",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
         "name": "TrendingRestaurantConnection",
         "description": "The connection type for TrendingRestaurant.",
         "fields": [
@@ -1557,7 +1651,7 @@
         "fields": null,
         "inputFields": [
           {
-            "name": "restaurantId",
+            "name": "yelpId",
             "description": null,
             "type": {
               "kind": "NON_NULL",
@@ -1631,7 +1725,7 @@
         "fields": null,
         "inputFields": [
           {
-            "name": "restaurantId",
+            "name": "yelpId",
             "description": null,
             "type": {
               "kind": "NON_NULL",
@@ -1701,7 +1795,7 @@
         "fields": null,
         "inputFields": [
           {
-            "name": "id",
+            "name": "yelpId",
             "description": null,
             "type": {
               "kind": "NON_NULL",
@@ -1775,7 +1869,7 @@
         "fields": null,
         "inputFields": [
           {
-            "name": "restaurantId",
+            "name": "yelpId",
             "description": null,
             "type": {
               "kind": "NON_NULL",

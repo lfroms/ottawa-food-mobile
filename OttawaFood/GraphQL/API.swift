@@ -70,6 +70,7 @@ public final class CurrentUserQuery: GraphQLQuery {
           nodes {
             __typename
             id
+            yelpId
             name
             imageUrl
           }
@@ -81,6 +82,7 @@ public final class CurrentUserQuery: GraphQLQuery {
             restaurant {
               __typename
               id
+              yelpId
               name
               imageUrl
             }
@@ -211,7 +213,8 @@ public final class CurrentUserQuery: GraphQLQuery {
           public static let selections: [GraphQLSelection] = [
             GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
             GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
-            GraphQLField("name", type: .nonNull(.scalar(String.self))),
+            GraphQLField("yelpId", type: .nonNull(.scalar(String.self))),
+            GraphQLField("name", type: .scalar(String.self)),
             GraphQLField("imageUrl", type: .scalar(String.self)),
           ]
 
@@ -221,8 +224,8 @@ public final class CurrentUserQuery: GraphQLQuery {
             self.resultMap = unsafeResultMap
           }
 
-          public init(id: GraphQLID, name: String, imageUrl: String? = nil) {
-            self.init(unsafeResultMap: ["__typename": "Restaurant", "id": id, "name": name, "imageUrl": imageUrl])
+          public init(id: GraphQLID, yelpId: String, name: String? = nil, imageUrl: String? = nil) {
+            self.init(unsafeResultMap: ["__typename": "Restaurant", "id": id, "yelpId": yelpId, "name": name, "imageUrl": imageUrl])
           }
 
           public var __typename: String {
@@ -243,9 +246,18 @@ public final class CurrentUserQuery: GraphQLQuery {
             }
           }
 
-          public var name: String {
+          public var yelpId: String {
             get {
-              return resultMap["name"]! as! String
+              return resultMap["yelpId"]! as! String
+            }
+            set {
+              resultMap.updateValue(newValue, forKey: "yelpId")
+            }
+          }
+
+          public var name: String? {
+            get {
+              return resultMap["name"] as? String
             }
             set {
               resultMap.updateValue(newValue, forKey: "name")
@@ -342,7 +354,8 @@ public final class CurrentUserQuery: GraphQLQuery {
             public static let selections: [GraphQLSelection] = [
               GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
               GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
-              GraphQLField("name", type: .nonNull(.scalar(String.self))),
+              GraphQLField("yelpId", type: .nonNull(.scalar(String.self))),
+              GraphQLField("name", type: .scalar(String.self)),
               GraphQLField("imageUrl", type: .scalar(String.self)),
             ]
 
@@ -352,8 +365,8 @@ public final class CurrentUserQuery: GraphQLQuery {
               self.resultMap = unsafeResultMap
             }
 
-            public init(id: GraphQLID, name: String, imageUrl: String? = nil) {
-              self.init(unsafeResultMap: ["__typename": "Restaurant", "id": id, "name": name, "imageUrl": imageUrl])
+            public init(id: GraphQLID, yelpId: String, name: String? = nil, imageUrl: String? = nil) {
+              self.init(unsafeResultMap: ["__typename": "Restaurant", "id": id, "yelpId": yelpId, "name": name, "imageUrl": imageUrl])
             }
 
             public var __typename: String {
@@ -374,9 +387,18 @@ public final class CurrentUserQuery: GraphQLQuery {
               }
             }
 
-            public var name: String {
+            public var yelpId: String {
               get {
-                return resultMap["name"]! as! String
+                return resultMap["yelpId"]! as! String
+              }
+              set {
+                resultMap.updateValue(newValue, forKey: "yelpId")
+              }
+            }
+
+            public var name: String? {
+              get {
+                return resultMap["name"] as? String
               }
               set {
                 resultMap.updateValue(newValue, forKey: "name")
@@ -412,6 +434,7 @@ public final class FeaturedQuery: GraphQLQuery {
           restaurant {
             __typename
             id
+            yelpId
             name
             imageUrl
           }
@@ -551,7 +574,8 @@ public final class FeaturedQuery: GraphQLQuery {
           public static let selections: [GraphQLSelection] = [
             GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
             GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
-            GraphQLField("name", type: .nonNull(.scalar(String.self))),
+            GraphQLField("yelpId", type: .nonNull(.scalar(String.self))),
+            GraphQLField("name", type: .scalar(String.self)),
             GraphQLField("imageUrl", type: .scalar(String.self)),
           ]
 
@@ -561,8 +585,8 @@ public final class FeaturedQuery: GraphQLQuery {
             self.resultMap = unsafeResultMap
           }
 
-          public init(id: GraphQLID, name: String, imageUrl: String? = nil) {
-            self.init(unsafeResultMap: ["__typename": "Restaurant", "id": id, "name": name, "imageUrl": imageUrl])
+          public init(id: GraphQLID, yelpId: String, name: String? = nil, imageUrl: String? = nil) {
+            self.init(unsafeResultMap: ["__typename": "Restaurant", "id": id, "yelpId": yelpId, "name": name, "imageUrl": imageUrl])
           }
 
           public var __typename: String {
@@ -583,9 +607,18 @@ public final class FeaturedQuery: GraphQLQuery {
             }
           }
 
-          public var name: String {
+          public var yelpId: String {
             get {
-              return resultMap["name"]! as! String
+              return resultMap["yelpId"]! as! String
+            }
+            set {
+              resultMap.updateValue(newValue, forKey: "yelpId")
+            }
+          }
+
+          public var name: String? {
+            get {
+              return resultMap["name"] as? String
             }
             set {
               resultMap.updateValue(newValue, forKey: "name")
@@ -620,6 +653,7 @@ public final class OttawaFavoritesQuery: GraphQLQuery {
           restaurant {
             __typename
             id
+            yelpId
             name
             imageUrl
           }
@@ -759,7 +793,8 @@ public final class OttawaFavoritesQuery: GraphQLQuery {
           public static let selections: [GraphQLSelection] = [
             GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
             GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
-            GraphQLField("name", type: .nonNull(.scalar(String.self))),
+            GraphQLField("yelpId", type: .nonNull(.scalar(String.self))),
+            GraphQLField("name", type: .scalar(String.self)),
             GraphQLField("imageUrl", type: .scalar(String.self)),
           ]
 
@@ -769,8 +804,8 @@ public final class OttawaFavoritesQuery: GraphQLQuery {
             self.resultMap = unsafeResultMap
           }
 
-          public init(id: GraphQLID, name: String, imageUrl: String? = nil) {
-            self.init(unsafeResultMap: ["__typename": "Restaurant", "id": id, "name": name, "imageUrl": imageUrl])
+          public init(id: GraphQLID, yelpId: String, name: String? = nil, imageUrl: String? = nil) {
+            self.init(unsafeResultMap: ["__typename": "Restaurant", "id": id, "yelpId": yelpId, "name": name, "imageUrl": imageUrl])
           }
 
           public var __typename: String {
@@ -791,9 +826,18 @@ public final class OttawaFavoritesQuery: GraphQLQuery {
             }
           }
 
-          public var name: String {
+          public var yelpId: String {
             get {
-              return resultMap["name"]! as! String
+              return resultMap["yelpId"]! as! String
+            }
+            set {
+              resultMap.updateValue(newValue, forKey: "yelpId")
+            }
+          }
+
+          public var name: String? {
+            get {
+              return resultMap["name"] as? String
             }
             set {
               resultMap.updateValue(newValue, forKey: "name")
@@ -828,6 +872,7 @@ public final class TrendingQuery: GraphQLQuery {
           restaurant {
             __typename
             id
+            yelpId
             name
             imageUrl
           }
@@ -967,7 +1012,8 @@ public final class TrendingQuery: GraphQLQuery {
           public static let selections: [GraphQLSelection] = [
             GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
             GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
-            GraphQLField("name", type: .nonNull(.scalar(String.self))),
+            GraphQLField("yelpId", type: .nonNull(.scalar(String.self))),
+            GraphQLField("name", type: .scalar(String.self)),
             GraphQLField("imageUrl", type: .scalar(String.self)),
           ]
 
@@ -977,8 +1023,8 @@ public final class TrendingQuery: GraphQLQuery {
             self.resultMap = unsafeResultMap
           }
 
-          public init(id: GraphQLID, name: String, imageUrl: String? = nil) {
-            self.init(unsafeResultMap: ["__typename": "Restaurant", "id": id, "name": name, "imageUrl": imageUrl])
+          public init(id: GraphQLID, yelpId: String, name: String? = nil, imageUrl: String? = nil) {
+            self.init(unsafeResultMap: ["__typename": "Restaurant", "id": id, "yelpId": yelpId, "name": name, "imageUrl": imageUrl])
           }
 
           public var __typename: String {
@@ -999,9 +1045,18 @@ public final class TrendingQuery: GraphQLQuery {
             }
           }
 
-          public var name: String {
+          public var yelpId: String {
             get {
-              return resultMap["name"]! as! String
+              return resultMap["yelpId"]! as! String
+            }
+            set {
+              resultMap.updateValue(newValue, forKey: "yelpId")
+            }
+          }
+
+          public var name: String? {
+            get {
+              return resultMap["name"] as? String
             }
             set {
               resultMap.updateValue(newValue, forKey: "name")
@@ -1036,6 +1091,7 @@ public final class YouMayLikeQuery: GraphQLQuery {
           restaurant {
             __typename
             id
+            yelpId
             name
             imageUrl
           }
@@ -1175,7 +1231,8 @@ public final class YouMayLikeQuery: GraphQLQuery {
           public static let selections: [GraphQLSelection] = [
             GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
             GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
-            GraphQLField("name", type: .nonNull(.scalar(String.self))),
+            GraphQLField("yelpId", type: .nonNull(.scalar(String.self))),
+            GraphQLField("name", type: .scalar(String.self)),
             GraphQLField("imageUrl", type: .scalar(String.self)),
           ]
 
@@ -1185,8 +1242,8 @@ public final class YouMayLikeQuery: GraphQLQuery {
             self.resultMap = unsafeResultMap
           }
 
-          public init(id: GraphQLID, name: String, imageUrl: String? = nil) {
-            self.init(unsafeResultMap: ["__typename": "Restaurant", "id": id, "name": name, "imageUrl": imageUrl])
+          public init(id: GraphQLID, yelpId: String, name: String? = nil, imageUrl: String? = nil) {
+            self.init(unsafeResultMap: ["__typename": "Restaurant", "id": id, "yelpId": yelpId, "name": name, "imageUrl": imageUrl])
           }
 
           public var __typename: String {
@@ -1207,9 +1264,18 @@ public final class YouMayLikeQuery: GraphQLQuery {
             }
           }
 
-          public var name: String {
+          public var yelpId: String {
             get {
-              return resultMap["name"]! as! String
+              return resultMap["yelpId"]! as! String
+            }
+            set {
+              resultMap.updateValue(newValue, forKey: "yelpId")
+            }
+          }
+
+          public var name: String? {
+            get {
+              return resultMap["name"] as? String
             }
             set {
               resultMap.updateValue(newValue, forKey: "name")
@@ -1234,8 +1300,8 @@ public final class CreateBucketListItemMutation: GraphQLMutation {
   /// The raw GraphQL definition of this operation.
   public let operationDefinition: String =
     """
-    mutation CreateBucketListItem($restaurantId: ID!) {
-      createBucketListItem(input: {restaurantId: $restaurantId}) {
+    mutation CreateBucketListItem($yelpId: ID!) {
+      createBucketListItem(input: {yelpId: $yelpId}) {
         __typename
         bucketListItem {
           __typename
@@ -1248,21 +1314,21 @@ public final class CreateBucketListItemMutation: GraphQLMutation {
 
   public let operationName: String = "CreateBucketListItem"
 
-  public var restaurantId: GraphQLID
+  public var yelpId: GraphQLID
 
-  public init(restaurantId: GraphQLID) {
-    self.restaurantId = restaurantId
+  public init(yelpId: GraphQLID) {
+    self.yelpId = yelpId
   }
 
   public var variables: GraphQLMap? {
-    return ["restaurantId": restaurantId]
+    return ["yelpId": yelpId]
   }
 
   public struct Data: GraphQLSelectionSet {
     public static let possibleTypes: [String] = ["Mutation"]
 
     public static let selections: [GraphQLSelection] = [
-      GraphQLField("createBucketListItem", arguments: ["input": ["restaurantId": GraphQLVariable("restaurantId")]], type: .object(CreateBucketListItem.selections)),
+      GraphQLField("createBucketListItem", arguments: ["input": ["yelpId": GraphQLVariable("yelpId")]], type: .object(CreateBucketListItem.selections)),
     ]
 
     public private(set) var resultMap: ResultMap
@@ -1374,8 +1440,8 @@ public final class DeleteBucketListItemMutation: GraphQLMutation {
   /// The raw GraphQL definition of this operation.
   public let operationDefinition: String =
     """
-    mutation DeleteBucketListItem($restaurantId: ID!) {
-      deleteBucketListItem(input: {restaurantId: $restaurantId}) {
+    mutation DeleteBucketListItem($yelpId: ID!) {
+      deleteBucketListItem(input: {yelpId: $yelpId}) {
         __typename
         bucketListItem {
           __typename
@@ -1388,21 +1454,21 @@ public final class DeleteBucketListItemMutation: GraphQLMutation {
 
   public let operationName: String = "DeleteBucketListItem"
 
-  public var restaurantId: GraphQLID
+  public var yelpId: GraphQLID
 
-  public init(restaurantId: GraphQLID) {
-    self.restaurantId = restaurantId
+  public init(yelpId: GraphQLID) {
+    self.yelpId = yelpId
   }
 
   public var variables: GraphQLMap? {
-    return ["restaurantId": restaurantId]
+    return ["yelpId": yelpId]
   }
 
   public struct Data: GraphQLSelectionSet {
     public static let possibleTypes: [String] = ["Mutation"]
 
     public static let selections: [GraphQLSelection] = [
-      GraphQLField("deleteBucketListItem", arguments: ["input": ["restaurantId": GraphQLVariable("restaurantId")]], type: .object(DeleteBucketListItem.selections)),
+      GraphQLField("deleteBucketListItem", arguments: ["input": ["yelpId": GraphQLVariable("yelpId")]], type: .object(DeleteBucketListItem.selections)),
     ]
 
     public private(set) var resultMap: ResultMap
@@ -1514,10 +1580,11 @@ public final class RestaurantQuery: GraphQLQuery {
   /// The raw GraphQL definition of this operation.
   public let operationDefinition: String =
     """
-    query Restaurant($id: ID!) {
-      restaurant(id: $id) {
+    query Restaurant($yelpId: ID!) {
+      restaurant(yelpId: $yelpId) {
         __typename
         id
+        yelpId
         name
         imageUrl
         yelpUrl
@@ -1532,21 +1599,21 @@ public final class RestaurantQuery: GraphQLQuery {
 
   public let operationName: String = "Restaurant"
 
-  public var id: GraphQLID
+  public var yelpId: GraphQLID
 
-  public init(id: GraphQLID) {
-    self.id = id
+  public init(yelpId: GraphQLID) {
+    self.yelpId = yelpId
   }
 
   public var variables: GraphQLMap? {
-    return ["id": id]
+    return ["yelpId": yelpId]
   }
 
   public struct Data: GraphQLSelectionSet {
     public static let possibleTypes: [String] = ["Query"]
 
     public static let selections: [GraphQLSelection] = [
-      GraphQLField("restaurant", arguments: ["id": GraphQLVariable("id")], type: .object(Restaurant.selections)),
+      GraphQLField("restaurant", arguments: ["yelpId": GraphQLVariable("yelpId")], type: .object(Restaurant.selections)),
     ]
 
     public private(set) var resultMap: ResultMap
@@ -1575,7 +1642,8 @@ public final class RestaurantQuery: GraphQLQuery {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
-        GraphQLField("name", type: .nonNull(.scalar(String.self))),
+        GraphQLField("yelpId", type: .nonNull(.scalar(String.self))),
+        GraphQLField("name", type: .scalar(String.self)),
         GraphQLField("imageUrl", type: .scalar(String.self)),
         GraphQLField("yelpUrl", type: .scalar(String.self)),
         GraphQLField("phone", type: .scalar(String.self)),
@@ -1591,8 +1659,8 @@ public final class RestaurantQuery: GraphQLQuery {
         self.resultMap = unsafeResultMap
       }
 
-      public init(id: GraphQLID, name: String, imageUrl: String? = nil, yelpUrl: String? = nil, phone: String? = nil, yelpRating: String? = nil, priceLevel: String? = nil, favorite: Bool, inBucketList: Bool) {
-        self.init(unsafeResultMap: ["__typename": "Restaurant", "id": id, "name": name, "imageUrl": imageUrl, "yelpUrl": yelpUrl, "phone": phone, "yelpRating": yelpRating, "priceLevel": priceLevel, "favorite": favorite, "inBucketList": inBucketList])
+      public init(id: GraphQLID, yelpId: String, name: String? = nil, imageUrl: String? = nil, yelpUrl: String? = nil, phone: String? = nil, yelpRating: String? = nil, priceLevel: String? = nil, favorite: Bool, inBucketList: Bool) {
+        self.init(unsafeResultMap: ["__typename": "Restaurant", "id": id, "yelpId": yelpId, "name": name, "imageUrl": imageUrl, "yelpUrl": yelpUrl, "phone": phone, "yelpRating": yelpRating, "priceLevel": priceLevel, "favorite": favorite, "inBucketList": inBucketList])
       }
 
       public var __typename: String {
@@ -1613,9 +1681,18 @@ public final class RestaurantQuery: GraphQLQuery {
         }
       }
 
-      public var name: String {
+      public var yelpId: String {
         get {
-          return resultMap["name"]! as! String
+          return resultMap["yelpId"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "yelpId")
+        }
+      }
+
+      public var name: String? {
+        get {
+          return resultMap["name"] as? String
         }
         set {
           resultMap.updateValue(newValue, forKey: "name")
@@ -1692,8 +1769,8 @@ public final class ToggleFavoriteMutation: GraphQLMutation {
   /// The raw GraphQL definition of this operation.
   public let operationDefinition: String =
     """
-    mutation ToggleFavorite($restaurantId: ID!) {
-      toggleFavoriteRestaurant(input: {id: $restaurantId}) {
+    mutation ToggleFavorite($yelpId: ID!) {
+      toggleFavoriteRestaurant(input: {yelpId: $yelpId}) {
         __typename
         restaurant {
           __typename
@@ -1705,21 +1782,21 @@ public final class ToggleFavoriteMutation: GraphQLMutation {
 
   public let operationName: String = "ToggleFavorite"
 
-  public var restaurantId: GraphQLID
+  public var yelpId: GraphQLID
 
-  public init(restaurantId: GraphQLID) {
-    self.restaurantId = restaurantId
+  public init(yelpId: GraphQLID) {
+    self.yelpId = yelpId
   }
 
   public var variables: GraphQLMap? {
-    return ["restaurantId": restaurantId]
+    return ["yelpId": yelpId]
   }
 
   public struct Data: GraphQLSelectionSet {
     public static let possibleTypes: [String] = ["Mutation"]
 
     public static let selections: [GraphQLSelection] = [
-      GraphQLField("toggleFavoriteRestaurant", arguments: ["input": ["id": GraphQLVariable("restaurantId")]], type: .object(ToggleFavoriteRestaurant.selections)),
+      GraphQLField("toggleFavoriteRestaurant", arguments: ["input": ["yelpId": GraphQLVariable("yelpId")]], type: .object(ToggleFavoriteRestaurant.selections)),
     ]
 
     public private(set) var resultMap: ResultMap

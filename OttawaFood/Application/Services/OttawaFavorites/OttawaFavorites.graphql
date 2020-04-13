@@ -5,6 +5,7 @@ query OttawaFavorites {
       index
       restaurant {
         id
+        yelpId
         name
         imageUrl
       }

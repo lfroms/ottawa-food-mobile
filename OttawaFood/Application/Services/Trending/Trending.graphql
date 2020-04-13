@@ -5,6 +5,7 @@ query Trending {
       index
       restaurant {
         id
+        yelpId
         name
         imageUrl
       }

@@ -1,5 +1,5 @@
-mutation CreateBucketListItem($restaurantId: ID!) {
-  createBucketListItem(input: {restaurantId: $restaurantId}) {
+mutation CreateBucketListItem($yelpId: ID!) {
+  createBucketListItem(input: {yelpId: $yelpId}) {
     bucketListItem {
       id
       status

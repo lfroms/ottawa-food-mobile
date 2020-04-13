@@ -5,6 +5,7 @@ query Featured {
       index
       restaurant {
         id
+        yelpId
         name
         imageUrl
       }
