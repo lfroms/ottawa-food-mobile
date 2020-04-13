@@ -19,10 +19,7 @@ struct TopBar: View {
 
             Spacer(minLength: 0)
 
-            Image(systemName: "magnifyingglass")
-                .font(Font.headline.weight(.semibold))
-                .background(Circle().foregroundColor(Color.primary.opacity(0.1)).frame(width: 40, height: 40))
-                .frame(width: 40, height: 40)
+            SearchButton()
         }
     }
 }

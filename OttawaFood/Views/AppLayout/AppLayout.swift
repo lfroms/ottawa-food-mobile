@@ -12,7 +12,7 @@ struct AppLayout: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 0) {
-                Color.white.edgesIgnoringSafeArea(.top).frame(height: 1)
+                Color.primary.colorInvert().edgesIgnoringSafeArea(.top).frame(height: 1)
 
                 ZStack(alignment: .bottom) {
                     ScrollView(.vertical, showsIndicators: false) {

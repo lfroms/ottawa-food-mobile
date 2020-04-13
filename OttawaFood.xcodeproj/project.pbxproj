@@ -74,6 +74,7 @@
 		80CE93342444D01400BA33C9 /* MyBucketListSectionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE93332444D01400BA33C9 /* MyBucketListSectionContainer.swift */; };
 		80CE93362444D01D00BA33C9 /* MyBucketListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE93352444D01D00BA33C9 /* MyBucketListSection.swift */; };
 		80CE93392444D60900BA33C9 /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE93382444D60900BA33C9 /* TopBar.swift */; };
+		80CE933C2444DC4100BA33C9 /* SearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE933B2444DC4100BA33C9 /* SearchButton.swift */; };
 		80F942D8244299A6003B5A49 /* ForYouSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F942D7244299A6003B5A49 /* ForYouSection.swift */; };
 		80F942DB244299D3003B5A49 /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F942DA244299D3003B5A49 /* AppServices.swift */; };
 /* End PBXBuildFile section */
@@ -147,6 +148,7 @@
 		80CE93332444D01400BA33C9 /* MyBucketListSectionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBucketListSectionContainer.swift; sourceTree = "<group>"; };
 		80CE93352444D01D00BA33C9 /* MyBucketListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBucketListSection.swift; sourceTree = "<group>"; };
 		80CE93382444D60900BA33C9 /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
+		80CE933B2444DC4100BA33C9 /* SearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButton.swift; sourceTree = "<group>"; };
 		80EFD1DA2443A29000F2EDCC /* OttawaFavorites.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = OttawaFavorites.graphql; sourceTree = "<group>"; };
 		80EFD1DB2443A29200F2EDCC /* OttawaFavoritesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OttawaFavoritesService.swift; sourceTree = "<group>"; };
 		80F942D7244299A6003B5A49 /* ForYouSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouSection.swift; sourceTree = "<group>"; };
@@ -544,9 +546,18 @@
 		80CE93372444D5F200BA33C9 /* TopBar */ = {
 			isa = PBXGroup;
 			children = (
+				80CE933A2444DC3600BA33C9 /* Components */,
 				80CE93382444D60900BA33C9 /* TopBar.swift */,
 			);
 			path = TopBar;
+			sourceTree = "<group>";
+		};
+		80CE933A2444DC3600BA33C9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				80CE933B2444DC4100BA33C9 /* SearchButton.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		80EFD1D92443A28A00F2EDCC /* OttawaFavorites */ = {
@@ -781,6 +792,7 @@
 				808AFC372443969900550386 /* ScrollableStackLabeledSection.swift in Sources */,
 				808AFC292442B36E00550386 /* LabeledSection.swift in Sources */,
 				800254FB243EA6B30026B7C8 /* AppLayout.swift in Sources */,
+				80CE933C2444DC4100BA33C9 /* SearchButton.swift in Sources */,
 				80F942D8244299A6003B5A49 /* ForYouSection.swift in Sources */,
 				808AFC302442B7D200550386 /* TrendingSectionContainer.swift in Sources */,
 				808AFBEF24429CC500550386 /* TabBar.swift in Sources */,
