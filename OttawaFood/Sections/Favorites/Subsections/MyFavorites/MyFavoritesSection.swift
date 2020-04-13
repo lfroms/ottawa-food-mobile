@@ -20,8 +20,11 @@ struct MyFavoritesSection: View {
                 .buttonStyle(ShrinkOnPressButtonStyle())
             }
         }
+        .padding([.top, .leading, .trailing], 20)
     }
 }
+
+extension MyFavoritesSection: Equatable {}
 
 struct MyFavoritesSection_Previews: PreviewProvider {
     static var previews: some View {

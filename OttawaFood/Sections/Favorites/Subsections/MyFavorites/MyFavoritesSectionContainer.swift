@@ -13,7 +13,7 @@ struct MyFavoritesSectionContainer: View {
 
     var body: some View {
         MyFavoritesSection(items: self.items)
-            .id(items.count)
+            .equatable()
             .onAppear {
                 self.currentUserService.fetch()
             }
