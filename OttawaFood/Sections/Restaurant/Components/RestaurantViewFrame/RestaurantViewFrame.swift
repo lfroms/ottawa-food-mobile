@@ -59,8 +59,7 @@ struct RestaurantViewFrame<Content: View>: View {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .leading) {
                     RestaurantViewBackButton(text: backButtonText, action: self.didPressBackButton)
-                        .padding(.top, 10)
-                        .padding(.horizontal, 20)
+                        .padding(20)
 
                     RestaurantViewTopSpacer()
 

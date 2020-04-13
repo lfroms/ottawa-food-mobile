@@ -12,7 +12,7 @@ struct RestaurantViewTopSpacer: View {
     var body: some View {
         Rectangle()
             .opacity(0)
-            .frame(height: 180)
+            .frame(height: 150)
     }
 }
 
