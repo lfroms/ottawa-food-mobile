@@ -9,11 +9,13 @@
 import SwiftUI
 
 struct SearchButton: View {
+    @EnvironmentObject private var searchSectionState: SearchSectionState
+
     var body: some View {
-        Button(action: {}) {
+        Button(action: searchSectionState.togglePresentation) {
             Image(systemName: "magnifyingglass")
                 .font(Font.headline.weight(.semibold))
-                .background(Circle().foregroundColor(Color.primary.opacity(0.1)).frame(width: 40, height: 40))
+                .background(Circle().foregroundColor(Color.primary.opacity(0.07)).frame(width: 40, height: 40))
                 .frame(width: 40, height: 40)
         }
         .buttonStyle(PlainButtonStyle())

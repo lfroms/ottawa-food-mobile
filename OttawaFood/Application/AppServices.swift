@@ -13,7 +13,7 @@ struct AppServices: ViewModifier {
     private static let trendingService: TrendingService = TrendingService()
     private static let ottawaFavoritesService: OttawaFavoritesService = OttawaFavoritesService()
     private static let featuredService: FeaturedService = FeaturedService()
-    private static let restaurantViewState: RestaurantViewState = RestaurantViewState()
+    private static let searchSectionState: SearchSectionState = SearchSectionState()
     private static let currentUserService: CurrentUserService = CurrentUserService()
     private static let youMayLikeService: YouMayLikeService = YouMayLikeService()
 
@@ -23,7 +23,7 @@ struct AppServices: ViewModifier {
             .environmentObject(Self.trendingService)
             .environmentObject(Self.ottawaFavoritesService)
             .environmentObject(Self.featuredService)
-            .environmentObject(Self.restaurantViewState)
+            .environmentObject(Self.searchSectionState)
             .environmentObject(Self.currentUserService)
             .environmentObject(Self.youMayLikeService)
     }
