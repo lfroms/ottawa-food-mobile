@@ -20,7 +20,7 @@ struct RestaurantView: View {
         ) {
             VStack(alignment: .leading, spacing: 30) {
                 HStack(alignment: .center, spacing: 10) {
-                    FloatingRating(text: "4.0")
+                    FloatingRating(text: self.service.restaurant?.yelpRating ?? "")
 
                     Spacer(minLength: 0)
 
@@ -39,7 +39,15 @@ struct RestaurantView: View {
                 }
                 .padding(.top, -25)
 
-                Text(self.service.restaurant?.phone ?? "")
+                VStack(alignment: .leading, spacing: 18) {
+                    if self.service.restaurant?.phone != nil {
+                        RestaurantViewIconDetail(symbolName: "phone.circle.fill", color: .green, text: self.service.restaurant!.phone!.toPhoneNumber())
+                    }
+
+                    if self.service.restaurant?.priceLevel != nil {
+                        RestaurantViewIconDetail(symbolName: "dollarsign.circle.fill", color: .orange, text: self.service.restaurant!.priceLevel!)
+                    }
+                }
             }
             .padding(.horizontal, 20)
         }
@@ -62,5 +70,11 @@ struct RestaurantView: View {
 struct RestaurantView_Previews: PreviewProvider {
     static var previews: some View {
         RestaurantView(restaurant: RestaurantItem(text: "Test Restaurant", imageUrl: nil, targetObjectId: "1"))
+    }
+}
+
+extension String {
+    public func toPhoneNumber() -> String {
+        return replacingOccurrences(of: "(\\d{3})(\\d{3})(\\d+)", with: "($1) $2-$3", options: .regularExpression, range: nil)
     }
 }
