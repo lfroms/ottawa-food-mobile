@@ -12,7 +12,7 @@ struct FavoritesSection: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 30) {
             MyFavoritesSectionContainer()
-            AlsoLikeSectionContainer()
+            YouMayLikeRecommendationRow()
         }
         .navigationBarTitle(Text(AppSection.favorites.name))
     }

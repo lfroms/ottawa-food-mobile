@@ -1,0 +1,13 @@
+query YouMayLike {
+  recommendations(first: 20) {
+    nodes {
+      id
+      index
+      restaurant {
+        id
+        name
+        imageUrl
+      }
+    }
+  }
+}

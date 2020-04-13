@@ -68,8 +68,11 @@
 		80CE931D2443FC6E00BA33C9 /* CurrentUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE931B2443FC5500BA33C9 /* CurrentUserService.swift */; };
 		80CE93222443FDC800BA33C9 /* MyFavoritesSectionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE93212443FDC800BA33C9 /* MyFavoritesSectionContainer.swift */; };
 		80CE93242443FDD000BA33C9 /* MyFavoritesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE93232443FDCF00BA33C9 /* MyFavoritesSection.swift */; };
-		80CE93262443FDD900BA33C9 /* AlsoLikeSectionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE93252443FDD900BA33C9 /* AlsoLikeSectionContainer.swift */; };
-		80CE93282443FDE300BA33C9 /* AlsoLikeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE93272443FDE300BA33C9 /* AlsoLikeSection.swift */; };
+		80CE932B2444CE9300BA33C9 /* YouMayLike.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 80CE932A2444CE9300BA33C9 /* YouMayLike.graphql */; };
+		80CE932D2444CE9F00BA33C9 /* YouMayLikeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE932C2444CE9F00BA33C9 /* YouMayLikeService.swift */; };
+		80CE93302444CF2700BA33C9 /* YouMayLikeRecommendationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE932F2444CF2700BA33C9 /* YouMayLikeRecommendationRow.swift */; };
+		80CE93342444D01400BA33C9 /* MyBucketListSectionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE93332444D01400BA33C9 /* MyBucketListSectionContainer.swift */; };
+		80CE93362444D01D00BA33C9 /* MyBucketListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE93352444D01D00BA33C9 /* MyBucketListSection.swift */; };
 		80F942D8244299A6003B5A49 /* ForYouSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F942D7244299A6003B5A49 /* ForYouSection.swift */; };
 		80F942DB244299D3003B5A49 /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F942DA244299D3003B5A49 /* AppServices.swift */; };
 /* End PBXBuildFile section */
@@ -137,8 +140,11 @@
 		80CE931C2443FC5500BA33C9 /* CurrentUser.graphql */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = CurrentUser.graphql; sourceTree = "<group>"; tabWidth = 2; };
 		80CE93212443FDC800BA33C9 /* MyFavoritesSectionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavoritesSectionContainer.swift; sourceTree = "<group>"; };
 		80CE93232443FDCF00BA33C9 /* MyFavoritesSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavoritesSection.swift; sourceTree = "<group>"; };
-		80CE93252443FDD900BA33C9 /* AlsoLikeSectionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlsoLikeSectionContainer.swift; sourceTree = "<group>"; };
-		80CE93272443FDE300BA33C9 /* AlsoLikeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlsoLikeSection.swift; sourceTree = "<group>"; };
+		80CE932A2444CE9300BA33C9 /* YouMayLike.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = YouMayLike.graphql; sourceTree = "<group>"; };
+		80CE932C2444CE9F00BA33C9 /* YouMayLikeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouMayLikeService.swift; sourceTree = "<group>"; };
+		80CE932F2444CF2700BA33C9 /* YouMayLikeRecommendationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouMayLikeRecommendationRow.swift; sourceTree = "<group>"; };
+		80CE93332444D01400BA33C9 /* MyBucketListSectionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBucketListSectionContainer.swift; sourceTree = "<group>"; };
+		80CE93352444D01D00BA33C9 /* MyBucketListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBucketListSection.swift; sourceTree = "<group>"; };
 		80EFD1DA2443A29000F2EDCC /* OttawaFavorites.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = OttawaFavorites.graphql; sourceTree = "<group>"; };
 		80EFD1DB2443A29200F2EDCC /* OttawaFavoritesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OttawaFavoritesService.swift; sourceTree = "<group>"; };
 		80F942D7244299A6003B5A49 /* ForYouSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouSection.swift; sourceTree = "<group>"; };
@@ -330,6 +336,7 @@
 		808AFC022442A4FD00550386 /* BucketList */ = {
 			isa = PBXGroup;
 			children = (
+				80CE93312444CFFF00BA33C9 /* Subsections */,
 				808AFC062442A51700550386 /* BucketListSection.swift */,
 			);
 			path = BucketList;
@@ -454,6 +461,7 @@
 		808AFC5124439B9400550386 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				80CE93292444CE7C00BA33C9 /* YouMayLike */,
 				80CE931A2443FC4F00BA33C9 /* Favorites */,
 				800996CF2443AFD1002A63F1 /* Featured */,
 				80EFD1D92443A28A00F2EDCC /* OttawaFavorites */,
@@ -484,7 +492,6 @@
 			isa = PBXGroup;
 			children = (
 				80CE931F2443FD5800BA33C9 /* MyFavorites */,
-				80CE93202443FD5C00BA33C9 /* AlsoLike */,
 			);
 			path = Subsections;
 			sourceTree = "<group>";
@@ -492,19 +499,44 @@
 		80CE931F2443FD5800BA33C9 /* MyFavorites */ = {
 			isa = PBXGroup;
 			children = (
-				80CE93212443FDC800BA33C9 /* MyFavoritesSectionContainer.swift */,
 				80CE93232443FDCF00BA33C9 /* MyFavoritesSection.swift */,
+				80CE93212443FDC800BA33C9 /* MyFavoritesSectionContainer.swift */,
 			);
 			path = MyFavorites;
 			sourceTree = "<group>";
 		};
-		80CE93202443FD5C00BA33C9 /* AlsoLike */ = {
+		80CE93292444CE7C00BA33C9 /* YouMayLike */ = {
 			isa = PBXGroup;
 			children = (
-				80CE93252443FDD900BA33C9 /* AlsoLikeSectionContainer.swift */,
-				80CE93272443FDE300BA33C9 /* AlsoLikeSection.swift */,
+				80CE932C2444CE9F00BA33C9 /* YouMayLikeService.swift */,
+				80CE932A2444CE9300BA33C9 /* YouMayLike.graphql */,
 			);
-			path = AlsoLike;
+			path = YouMayLike;
+			sourceTree = "<group>";
+		};
+		80CE932E2444CF1400BA33C9 /* RecommendationRows */ = {
+			isa = PBXGroup;
+			children = (
+				80CE932F2444CF2700BA33C9 /* YouMayLikeRecommendationRow.swift */,
+			);
+			path = RecommendationRows;
+			sourceTree = "<group>";
+		};
+		80CE93312444CFFF00BA33C9 /* Subsections */ = {
+			isa = PBXGroup;
+			children = (
+				80CE93322444D00600BA33C9 /* MyBucketList */,
+			);
+			path = Subsections;
+			sourceTree = "<group>";
+		};
+		80CE93322444D00600BA33C9 /* MyBucketList */ = {
+			isa = PBXGroup;
+			children = (
+				80CE93352444D01D00BA33C9 /* MyBucketListSection.swift */,
+				80CE93332444D01400BA33C9 /* MyBucketListSectionContainer.swift */,
+			);
+			path = MyBucketList;
 			sourceTree = "<group>";
 		};
 		80EFD1D92443A28A00F2EDCC /* OttawaFavorites */ = {
@@ -519,6 +551,7 @@
 		80F942D224429914003B5A49 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				80CE932E2444CF1400BA33C9 /* RecommendationRows */,
 				800996CC2443AA5F002A63F1 /* ButtonStyles */,
 				800996C92443A487002A63F1 /* TouchScale */,
 				808AFC2B2442B4DE00550386 /* RestaurantCard */,
@@ -655,6 +688,7 @@
 				808AFC5624439BD300550386 /* Trending.graphql in Resources */,
 				808AFC5024439B4E00550386 /* schema.json in Resources */,
 				800996F42443EA4F002A63F1 /* ToggleFavorite.graphql in Resources */,
+				80CE932B2444CE9300BA33C9 /* YouMayLike.graphql in Resources */,
 				80025503243EA6B40026B7C8 /* LaunchScreen.storyboard in Resources */,
 				800996F82443EBBF002A63F1 /* DeleteBucketListItem.graphql in Resources */,
 				800996F62443EBB9002A63F1 /* CreateBucketListItem.graphql in Resources */,
@@ -694,9 +728,9 @@
 				80CE931D2443FC6E00BA33C9 /* CurrentUserService.swift in Sources */,
 				800996D22443B01C002A63F1 /* FeaturedService.swift in Sources */,
 				800996C82443A3EE002A63F1 /* OttawaFavoritesService.swift in Sources */,
-				80CE93282443FDE300BA33C9 /* AlsoLikeSection.swift in Sources */,
 				808AFC322442B7D900550386 /* TrendingSection.swift in Sources */,
 				800996E72443C685002A63F1 /* RestaurantViewFrame.swift in Sources */,
+				80CE93302444CF2700BA33C9 /* YouMayLikeRecommendationRow.swift in Sources */,
 				80CE93242443FDD000BA33C9 /* MyFavoritesSection.swift in Sources */,
 				808AFBFA24429E9600550386 /* TabData.swift in Sources */,
 				808AFC072442A51700550386 /* BucketListSection.swift in Sources */,
@@ -704,15 +738,18 @@
 				800996ED2443C9BE002A63F1 /* FloatingRating.swift in Sources */,
 				808AFC142442A82000550386 /* FeaturedSectionContainer.swift in Sources */,
 				800254F7243EA6B30026B7C8 /* AppDelegate.swift in Sources */,
+				80CE932D2444CE9F00BA33C9 /* YouMayLikeService.swift in Sources */,
 				808AFC3C2443978E00550386 /* OttawaFavoritesSection.swift in Sources */,
 				808AFBF624429E3A00550386 /* TabBarContainer.swift in Sources */,
 				80CE93222443FDC800BA33C9 /* MyFavoritesSectionContainer.swift in Sources */,
+				80CE93362444D01D00BA33C9 /* MyBucketListSection.swift in Sources */,
 				800996CB2443A499002A63F1 /* TouchScaleButton.swift in Sources */,
 				808AFC162442A82700550386 /* FeaturedSection.swift in Sources */,
 				808AFBF124429D4E00550386 /* AppSection.swift in Sources */,
 				808AFC1C2442A8D300550386 /* FeaturedCard.swift in Sources */,
 				800254F9243EA6B30026B7C8 /* SceneDelegate.swift in Sources */,
 				800996D92443B55C002A63F1 /* RestaurantViewState.swift in Sources */,
+				80CE93342444D01400BA33C9 /* MyBucketListSectionContainer.swift in Sources */,
 				808AFC192442A86200550386 /* RestaurantItem.swift in Sources */,
 				800996F22443E0E3002A63F1 /* RestaurantViewService.swift in Sources */,
 				808AFBF424429E1000550386 /* AppState.swift in Sources */,
@@ -729,7 +766,6 @@
 				800996FC2443EFFC002A63F1 /* RestaurantViewIconDetail.swift in Sources */,
 				800996E52443C609002A63F1 /* RestaurantViewTopSpacer.swift in Sources */,
 				800996E32443C5AB002A63F1 /* RestaurantViewBackButton.swift in Sources */,
-				80CE93262443FDD900BA33C9 /* AlsoLikeSectionContainer.swift in Sources */,
 				808AFC372443969900550386 /* ScrollableStackLabeledSection.swift in Sources */,
 				808AFC292442B36E00550386 /* LabeledSection.swift in Sources */,
 				800254FB243EA6B30026B7C8 /* AppLayout.swift in Sources */,

@@ -10,6 +10,7 @@ import SwiftUI
 
 final class CurrentUserService: ObservableObject {
     @Published private(set) var favorites: [CurrentUserQuery.Data.CurrentUser.FavoriteRestaurant.Node?] = []
+    @Published private(set) var bucketListItems: [CurrentUserQuery.Data.CurrentUser.BucketListItem.Node?] = []
 
     public func fetch() {
         let query = CurrentUserQuery()
@@ -19,6 +20,7 @@ final class CurrentUserService: ObservableObject {
             case .success(let graphQLResult):
                 if let data = graphQLResult.data {
                     self.favorites = data.currentUser?.favoriteRestaurants.nodes ?? []
+                    self.bucketListItems = data.currentUser?.bucketListItems.nodes ?? []
                 }
 
             case .failure(let error):

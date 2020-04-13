@@ -7,5 +7,14 @@ query CurrentUser {
         imageUrl
       }
     }
+    bucketListItems {
+      nodes {
+        restaurant {
+          id
+          name
+          imageUrl
+        }
+      }
+    }
   }
 }

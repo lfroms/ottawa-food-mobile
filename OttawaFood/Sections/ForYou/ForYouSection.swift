@@ -16,6 +16,7 @@ struct ForYouSection: View {
 
             TrendingSectionContainer()
             OttawaFavoritesSectionContainer()
+            YouMayLikeRecommendationRow()
         }
         .navigationBarTitle(Text(AppSection.forYou.name))
     }

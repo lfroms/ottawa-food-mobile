@@ -15,6 +15,7 @@ struct AppServices: ViewModifier {
     private static let featuredService: FeaturedService = FeaturedService()
     private static let restaurantViewState: RestaurantViewState = RestaurantViewState()
     private static let currentUserService: CurrentUserService = CurrentUserService()
+    private static let youMayLikeService: YouMayLikeService = YouMayLikeService()
 
     func body(content: Content) -> some View {
         content
@@ -24,5 +25,6 @@ struct AppServices: ViewModifier {
             .environmentObject(Self.featuredService)
             .environmentObject(Self.restaurantViewState)
             .environmentObject(Self.currentUserService)
+            .environmentObject(Self.youMayLikeService)
     }
 }
