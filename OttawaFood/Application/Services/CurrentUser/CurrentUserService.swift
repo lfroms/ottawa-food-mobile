@@ -15,8 +15,8 @@ final class CurrentUserService: ObservableObject {
 
     public func fetch() {
         let query = CurrentUserQuery()
-        
-        GraphQL.shared.apollo.fetch(query: query) { result in
+
+        GraphQL.shared.apollo.fetch(query: query, cachePolicy: .returnCacheDataAndFetch) { result in
             switch result {
             case .success(let graphQLResult):
                 if let data = graphQLResult.data {
