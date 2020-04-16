@@ -14,7 +14,7 @@ final class GraphQL {
     private let serverAddress = "http://localhost:3000/graphql"
 
     private lazy var networkTransport: HTTPNetworkTransport = {
-        let transport = HTTPNetworkTransport(url: URL(string: "http://localhost:3000/graphql")!)
+        let transport = HTTPNetworkTransport(url: URL(string: serverAddress)!)
         transport.delegate = self
         return transport
     }()
