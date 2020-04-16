@@ -20,9 +20,6 @@ struct YouMayLikeRecommendationRow: View {
                 .buttonStyle(ShrinkOnPressButtonStyle())
             }
         }
-        .onAppear {
-            self.currentUserService.fetch()
-        }
     }
 
     private var items: [RestaurantItem] {

@@ -69,7 +69,6 @@ public final class CurrentUserQuery: GraphQLQuery {
           __typename
           nodes {
             __typename
-            id
             index
             restaurant {
               __typename
@@ -237,7 +236,6 @@ public final class CurrentUserQuery: GraphQLQuery {
 
           public static let selections: [GraphQLSelection] = [
             GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-            GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
             GraphQLField("index", type: .nonNull(.scalar(Int.self))),
             GraphQLField("restaurant", type: .nonNull(.object(Restaurant.selections))),
           ]
@@ -248,8 +246,8 @@ public final class CurrentUserQuery: GraphQLQuery {
             self.resultMap = unsafeResultMap
           }
 
-          public init(id: GraphQLID, index: Int, restaurant: Restaurant) {
-            self.init(unsafeResultMap: ["__typename": "Recommendation", "id": id, "index": index, "restaurant": restaurant.resultMap])
+          public init(index: Int, restaurant: Restaurant) {
+            self.init(unsafeResultMap: ["__typename": "Recommendation", "index": index, "restaurant": restaurant.resultMap])
           }
 
           public var __typename: String {
@@ -258,15 +256,6 @@ public final class CurrentUserQuery: GraphQLQuery {
             }
             set {
               resultMap.updateValue(newValue, forKey: "__typename")
-            }
-          }
-
-          public var id: GraphQLID {
-            get {
-              return resultMap["id"]! as! GraphQLID
-            }
-            set {
-              resultMap.updateValue(newValue, forKey: "id")
             }
           }
 
