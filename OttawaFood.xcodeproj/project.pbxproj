@@ -30,6 +30,9 @@
 		800996F62443EBB9002A63F1 /* CreateBucketListItem.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 800996F52443EBB9002A63F1 /* CreateBucketListItem.graphql */; };
 		800996F82443EBBF002A63F1 /* DeleteBucketListItem.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 800996F72443EBBF002A63F1 /* DeleteBucketListItem.graphql */; };
 		800996FC2443EFFC002A63F1 /* RestaurantViewIconDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800996FB2443EFFC002A63F1 /* RestaurantViewIconDetail.swift */; };
+		805820F52447C9AC006DAE2D /* ReadyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805820F42447C9AC006DAE2D /* ReadyController.swift */; };
+		805820F72447CAFC006DAE2D /* OnboardingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805820F62447CAFC006DAE2D /* OnboardingNavigationController.swift */; };
+		805820FA2447D012006DAE2D /* OnboardingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805820F92447D012006DAE2D /* OnboardingButton.swift */; };
 		808AFBEC24429AD600550386 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFBEB24429AD600550386 /* SectionHeader.swift */; };
 		808AFBEF24429CC500550386 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFBEE24429CC500550386 /* TabBar.swift */; };
 		808AFBF124429D4E00550386 /* AppSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFBF024429D4E00550386 /* AppSection.swift */; };
@@ -63,6 +66,11 @@
 		808AFC5424439BC400550386 /* TrendingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFC5324439BC400550386 /* TrendingService.swift */; };
 		808AFC5624439BD300550386 /* Trending.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 808AFC5524439BD300550386 /* Trending.graphql */; };
 		808AFC5924439C8000550386 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AFC5824439C8000550386 /* API.swift */; };
+		80C6B7F52447BC74001D9D29 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C6B7F42447BC74001D9D29 /* Session.swift */; };
+		80C6B7F72447BE97001D9D29 /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C6B7F62447BE97001D9D29 /* SignInController.swift */; };
+		80C6B7F92447C321001D9D29 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C6B7F82447C321001D9D29 /* Application.swift */; };
+		80C6B7FB2447C3D5001D9D29 /* UIFont+weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C6B7FA2447C3D5001D9D29 /* UIFont+weight.swift */; };
+		80C6B8002447C8EF001D9D29 /* SignIn+Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C6B7FF2447C8EF001D9D29 /* SignIn+Authorization.swift */; };
 		80CE93192443F7A100BA33C9 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 80CE93182443F7A100BA33C9 /* URLImage */; };
 		80CE931D2443FC6E00BA33C9 /* CurrentUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE931B2443FC5500BA33C9 /* CurrentUserService.swift */; };
 		80CE93222443FDC800BA33C9 /* MyFavoritesSectionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CE93212443FDC800BA33C9 /* MyFavoritesSectionContainer.swift */; };
@@ -92,7 +100,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		800254F3243EA6B30026B7C8 /* OttawaFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OttawaFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		800254F3243EA6B30026B7C8 /* Ottawa Food Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ottawa Food Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		800254F6243EA6B30026B7C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		800254F8243EA6B30026B7C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		800254FA243EA6B30026B7C8 /* AppLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLayout.swift; sourceTree = "<group>"; };
@@ -117,6 +125,9 @@
 		800996F52443EBB9002A63F1 /* CreateBucketListItem.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = CreateBucketListItem.graphql; sourceTree = "<group>"; };
 		800996F72443EBBF002A63F1 /* DeleteBucketListItem.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = DeleteBucketListItem.graphql; sourceTree = "<group>"; };
 		800996FB2443EFFC002A63F1 /* RestaurantViewIconDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewIconDetail.swift; sourceTree = "<group>"; };
+		805820F42447C9AC006DAE2D /* ReadyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyController.swift; sourceTree = "<group>"; };
+		805820F62447CAFC006DAE2D /* OnboardingNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNavigationController.swift; sourceTree = "<group>"; };
+		805820F92447D012006DAE2D /* OnboardingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButton.swift; sourceTree = "<group>"; };
 		808AFBEB24429AD600550386 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		808AFBEE24429CC500550386 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		808AFBF024429D4E00550386 /* AppSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSection.swift; sourceTree = "<group>"; };
@@ -149,6 +160,12 @@
 		808AFC5324439BC400550386 /* TrendingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingService.swift; sourceTree = "<group>"; };
 		808AFC5524439BD300550386 /* Trending.graphql */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = Trending.graphql; sourceTree = "<group>"; tabWidth = 2; };
 		808AFC5824439C8000550386 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		80C6B7F42447BC74001D9D29 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		80C6B7F62447BE97001D9D29 /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
+		80C6B7F82447C321001D9D29 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		80C6B7FA2447C3D5001D9D29 /* UIFont+weight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+weight.swift"; sourceTree = "<group>"; };
+		80C6B7FC2447C72D001D9D29 /* OttawaFood.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OttawaFood.entitlements; sourceTree = "<group>"; };
+		80C6B7FF2447C8EF001D9D29 /* SignIn+Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignIn+Authorization.swift"; sourceTree = "<group>"; };
 		80CE931B2443FC5500BA33C9 /* CurrentUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserService.swift; sourceTree = "<group>"; };
 		80CE931C2443FC5500BA33C9 /* CurrentUser.graphql */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = CurrentUser.graphql; sourceTree = "<group>"; tabWidth = 2; };
 		80CE93212443FDC800BA33C9 /* MyFavoritesSectionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavoritesSectionContainer.swift; sourceTree = "<group>"; };
@@ -203,7 +220,7 @@
 		800254F4243EA6B30026B7C8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				800254F3243EA6B30026B7C8 /* OttawaFood.app */,
+				800254F3243EA6B30026B7C8 /* Ottawa Food Guide.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -211,9 +228,10 @@
 		800254F5243EA6B30026B7C8 /* OttawaFood */ = {
 			isa = PBXGroup;
 			children = (
+				80C6B7FC2447C72D001D9D29 /* OttawaFood.entitlements */,
+				80F942D324429936003B5A49 /* Application */,
 				80FCD238244511B100D0B0CF /* Extensions */,
 				808AFC4024439A1800550386 /* GraphQL */,
-				80F942D324429936003B5A49 /* Application */,
 				80F942D224429914003B5A49 /* Views */,
 				80F942D524429990003B5A49 /* Sections */,
 				800254FC243EA6B40026B7C8 /* Assets.xcassets */,
@@ -314,6 +332,23 @@
 				800996F32443EA4F002A63F1 /* ToggleFavorite.graphql */,
 			);
 			path = GraphQL;
+			sourceTree = "<group>";
+		};
+		805820F32447C993006DAE2D /* Ready */ = {
+			isa = PBXGroup;
+			children = (
+				805820F82447D005006DAE2D /* Components */,
+				805820F42447C9AC006DAE2D /* ReadyController.swift */,
+			);
+			path = Ready;
+			sourceTree = "<group>";
+		};
+		805820F82447D005006DAE2D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				805820F92447D012006DAE2D /* OnboardingButton.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		808AFBED24429CB700550386 /* TabBar */ = {
@@ -509,6 +544,33 @@
 			path = Trending;
 			sourceTree = "<group>";
 		};
+		80C6B7F22447BA40001D9D29 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				805820F62447CAFC006DAE2D /* OnboardingNavigationController.swift */,
+				80C6B7FE2447C8D7001D9D29 /* SignIn */,
+				805820F32447C993006DAE2D /* Ready */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		80C6B7FD2447C7F2001D9D29 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				80C6B7F42447BC74001D9D29 /* Session.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		80C6B7FE2447C8D7001D9D29 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				80C6B7F62447BE97001D9D29 /* SignInController.swift */,
+				80C6B7FF2447C8EF001D9D29 /* SignIn+Authorization.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
 		80CE931A2443FC4F00BA33C9 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
@@ -662,6 +724,8 @@
 				800254F8243EA6B30026B7C8 /* SceneDelegate.swift */,
 				80F942DA244299D3003B5A49 /* AppServices.swift */,
 				808AFBF024429D4E00550386 /* AppSection.swift */,
+				80C6B7FD2447C7F2001D9D29 /* Session */,
+				80C6B7F82447C321001D9D29 /* Application.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -677,6 +741,7 @@
 		80F942D524429990003B5A49 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				80C6B7F22447BA40001D9D29 /* Onboarding */,
 				80F942D624429998003B5A49 /* ForYou */,
 				808AFC012442A4F700550386 /* Favorites */,
 				808AFC022442A4FD00550386 /* BucketList */,
@@ -719,6 +784,7 @@
 			isa = PBXGroup;
 			children = (
 				80FCD239244511BB00D0B0CF /* NSObject+Debounce.swift */,
+				80C6B7FA2447C3D5001D9D29 /* UIFont+weight.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -745,7 +811,7 @@
 				80CE93182443F7A100BA33C9 /* URLImage */,
 			);
 			productName = OttawaFood;
-			productReference = 800254F3243EA6B30026B7C8 /* OttawaFood.app */;
+			productReference = 800254F3243EA6B30026B7C8 /* Ottawa Food Guide.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -832,6 +898,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80C6B7F52447BC74001D9D29 /* Session.swift in Sources */,
+				80C6B7F92447C321001D9D29 /* Application.swift in Sources */,
 				80CE931D2443FC6E00BA33C9 /* CurrentUserService.swift in Sources */,
 				80CE93482444E43300BA33C9 /* SearchSubsection.swift in Sources */,
 				80CE933F2444E3EA00BA33C9 /* SearchModal.swift in Sources */,
@@ -839,10 +907,13 @@
 				800996C82443A3EE002A63F1 /* OttawaFavoritesService.swift in Sources */,
 				808AFC322442B7D900550386 /* TrendingSection.swift in Sources */,
 				800996E72443C685002A63F1 /* RestaurantViewFrame.swift in Sources */,
+				805820FA2447D012006DAE2D /* OnboardingButton.swift in Sources */,
 				80CE93302444CF2700BA33C9 /* YouMayLikeRecommendationRow.swift in Sources */,
 				80CE93242443FDD000BA33C9 /* MyFavoritesSection.swift in Sources */,
 				808AFBFA24429E9600550386 /* TabData.swift in Sources */,
+				80C6B7F72447BE97001D9D29 /* SignInController.swift in Sources */,
 				808AFC072442A51700550386 /* BucketListSection.swift in Sources */,
+				805820F52447C9AC006DAE2D /* ReadyController.swift in Sources */,
 				808AFC3F244397FB00550386 /* TabBarFiller.swift in Sources */,
 				80CE934B2444E44600BA33C9 /* SearchItem.swift in Sources */,
 				800996ED2443C9BE002A63F1 /* FloatingRating.swift in Sources */,
@@ -866,6 +937,7 @@
 				808AFC192442A86200550386 /* RestaurantItem.swift in Sources */,
 				800996F22443E0E3002A63F1 /* RestaurantViewService.swift in Sources */,
 				80FCD23724450F9600D0B0CF /* IndicatorShape.swift in Sources */,
+				80C6B8002447C8EF001D9D29 /* SignIn+Authorization.swift in Sources */,
 				808AFBF424429E1000550386 /* AppState.swift in Sources */,
 				808AFC5424439BC400550386 /* TrendingService.swift in Sources */,
 				80FCD23A244511BB00D0B0CF /* NSObject+Debounce.swift in Sources */,
@@ -877,6 +949,7 @@
 				808AFC102442A7D700550386 /* PageControl.swift in Sources */,
 				80CE93392444D60900BA33C9 /* TopBar.swift in Sources */,
 				80F942DB244299D3003B5A49 /* AppServices.swift in Sources */,
+				805820F72447CAFC006DAE2D /* OnboardingNavigationController.swift in Sources */,
 				800996EB2443C889002A63F1 /* FloatingButton.swift in Sources */,
 				808AFC052442A50F00550386 /* FavoritesSection.swift in Sources */,
 				808AFC2D2442B4EA00550386 /* RestaurantCard.swift in Sources */,
@@ -884,6 +957,7 @@
 				800996E52443C609002A63F1 /* RestaurantViewTopSpacer.swift in Sources */,
 				800996E32443C5AB002A63F1 /* RestaurantViewBackButton.swift in Sources */,
 				808AFC372443969900550386 /* ScrollableStackLabeledSection.swift in Sources */,
+				80C6B7FB2447C3D5001D9D29 /* UIFont+weight.swift in Sources */,
 				808AFC292442B36E00550386 /* LabeledSection.swift in Sources */,
 				800254FB243EA6B30026B7C8 /* AppLayout.swift in Sources */,
 				80CE933C2444DC4100BA33C9 /* SearchButton.swift in Sources */,
@@ -1036,6 +1110,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OttawaFood/OttawaFood.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"OttawaFood/Preview Content\"";
 				DEVELOPMENT_TEAM = 8P8574Z65P;
@@ -1046,7 +1121,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.romsicki.OttawaFood;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Ottawa Food Guide";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1056,6 +1131,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OttawaFood/OttawaFood.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"OttawaFood/Preview Content\"";
 				DEVELOPMENT_TEAM = 8P8574Z65P;
@@ -1066,7 +1142,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.romsicki.OttawaFood;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Ottawa Food Guide";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

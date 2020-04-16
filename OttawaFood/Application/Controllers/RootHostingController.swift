@@ -30,6 +30,7 @@ extension EnvironmentValues { // Environment key path variable
 
 class RootHostingController<Content>: UIHostingController<Content> where Content: View {
     private var internalStyle = UIStatusBarStyle.default
+    private var didPresentOnboarding: Bool = false
 
     @objc open dynamic override var preferredStatusBarStyle: UIStatusBarStyle {
         get {
@@ -38,6 +39,21 @@ class RootHostingController<Content>: UIHostingController<Content> where Content
         set {
             internalStyle = newValue
             self.setNeedsStatusBarAppearanceUpdate()
+        }
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        guard !self.didPresentOnboarding else {
+            return
+        }
+
+        let onboarding = OnboardingNavigationController(rootViewController: SignInController())
+        onboarding.modalPresentationStyle = .fullScreen
+
+        present(onboarding, animated: false) {
+            self.didPresentOnboarding = true
         }
     }
 
