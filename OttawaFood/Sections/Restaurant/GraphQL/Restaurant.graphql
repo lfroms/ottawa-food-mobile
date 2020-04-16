@@ -1,14 +1,16 @@
-query Restaurant($yelpId: ID!) {
-  restaurant(yelpId: $yelpId) {
-    id
-    yelpId
-    name
-    imageUrl
-    yelpUrl
-    phone
-    yelpRating
-    priceLevel
-    favorite
-    inBucketList
+mutation Restaurant($yelpId: ID!) {
+  createOrRetrieveRestaurant(input: {yelpId: $yelpId}) {
+    restaurant {
+      id
+      yelpId
+      name
+      imageUrl
+      yelpUrl
+      phone
+      yelpRating
+      priceLevel
+      favorite
+      inBucketList
+    }
   }
 }

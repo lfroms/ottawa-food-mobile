@@ -9,18 +9,18 @@
 import SwiftUI
 
 struct FeaturedSectionContainer: View {
-    @EnvironmentObject private var featuredService: FeaturedService
+    @EnvironmentObject private var currentUserService: CurrentUserService
 
     var body: some View {
         FeaturedSection(action: { _ in }, pages: pages)
             .equatable()
             .onAppear {
-                self.featuredService.fetch()
+                self.currentUserService.fetch()
             }
     }
 
     private var pages: [RestaurantItem] {
-        self.featuredService.featured.compactMap {
+        self.currentUserService.recommendations.compactMap {
             guard let node = $0 else {
                 return nil
             }

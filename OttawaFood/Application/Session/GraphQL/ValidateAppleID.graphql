@@ -1,0 +1,5 @@
+mutation ValidateAppleID($name: String!, $token: String!) {
+  validateAppleId(input: {name: $name, token: $token}) {
+    token
+  }
+}

@@ -8,29 +8,9 @@
 
 import SwiftUI
 
-class LocalStatusBarStyle {
-    fileprivate var getter: () -> UIStatusBarStyle = { .default }
-    fileprivate var setter: (UIStatusBarStyle) -> Void = { _ in }
-
-    var currentStyle: UIStatusBarStyle {
-        get { self.getter() }
-        set { self.setter(newValue) }
-    }
-}
-
-struct LocalStatusBarStyleKey: EnvironmentKey {
-    static let defaultValue: LocalStatusBarStyle = LocalStatusBarStyle()
-}
-
-extension EnvironmentValues { // Environment key path variable
-    var localStatusBarStyle: LocalStatusBarStyle {
-        return self[LocalStatusBarStyleKey.self]
-    }
-}
-
 class RootHostingController<Content>: UIHostingController<Content> where Content: View {
     private var internalStyle = UIStatusBarStyle.default
-    private var didPresentOnboarding: Bool = false
+    internal var didPresentOnboarding: Bool = false
 
     @objc open dynamic override var preferredStatusBarStyle: UIStatusBarStyle {
         get {
@@ -45,16 +25,7 @@ class RootHostingController<Content>: UIHostingController<Content> where Content
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        guard !self.didPresentOnboarding else {
-            return
-        }
-
-        let onboarding = OnboardingNavigationController(rootViewController: SignInController())
-        onboarding.modalPresentationStyle = .fullScreen
-
-        present(onboarding, animated: false) {
-            self.didPresentOnboarding = true
-        }
+        presentOnboardingIfNeeded()
     }
 
     override init(rootView: Content) {

@@ -12,19 +12,15 @@ struct AppServices: ViewModifier {
     private static let appState: AppState = AppState()
     private static let trendingService: TrendingService = TrendingService()
     private static let ottawaFavoritesService: OttawaFavoritesService = OttawaFavoritesService()
-    private static let featuredService: FeaturedService = FeaturedService()
     private static let searchSectionState: SearchSectionState = SearchSectionState()
     private static let currentUserService: CurrentUserService = CurrentUserService()
-    private static let youMayLikeService: YouMayLikeService = YouMayLikeService()
 
     func body(content: Content) -> some View {
         content
             .environmentObject(Self.appState)
             .environmentObject(Self.trendingService)
             .environmentObject(Self.ottawaFavoritesService)
-            .environmentObject(Self.featuredService)
             .environmentObject(Self.searchSectionState)
             .environmentObject(Self.currentUserService)
-            .environmentObject(Self.youMayLikeService)
     }
 }

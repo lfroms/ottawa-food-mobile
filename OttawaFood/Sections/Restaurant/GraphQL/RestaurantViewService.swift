@@ -10,18 +10,18 @@ import Apollo
 import SwiftUI
 
 final class RestaurantViewService: ObservableObject {
-    @Published private(set) var restaurant: RestaurantQuery.Data.Restaurant?
+    @Published private(set) var restaurant: RestaurantMutation.Data.CreateOrRetrieveRestaurant.Restaurant?
     @Published private(set) var bucketListed: Bool = false
 
     public func fetch(id: GraphQLID) {
-        let query = RestaurantQuery(yelpId: id)
+        let mutation = RestaurantMutation(yelpId: id)
 
-        GraphQL.shared.apollo.fetch(query: query, cachePolicy: .returnCacheDataAndFetch) { result in
+        GraphQL.shared.apollo.perform(mutation: mutation) { result in
             switch result {
             case .success(let graphQLResult):
                 if let data = graphQLResult.data {
-                    self.restaurant = data.restaurant
-                    self.bucketListed = data.restaurant?.inBucketList ?? false
+                    self.restaurant = data.createOrRetrieveRestaurant?.restaurant
+                    self.bucketListed = data.createOrRetrieveRestaurant?.restaurant.inBucketList ?? false
                 }
 
             case .failure(let error):

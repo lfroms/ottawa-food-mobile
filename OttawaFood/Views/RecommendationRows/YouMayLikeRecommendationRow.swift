@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct YouMayLikeRecommendationRow: View {
-    @EnvironmentObject private var youMayLikeService: YouMayLikeService
+    @EnvironmentObject private var currentUserService: CurrentUserService
 
     var body: some View {
         ScrollableStackLabeledSection(label: "You may also like") {
@@ -21,12 +21,12 @@ struct YouMayLikeRecommendationRow: View {
             }
         }
         .onAppear {
-            self.youMayLikeService.fetch()
+            self.currentUserService.fetch()
         }
     }
 
     private var items: [RestaurantItem] {
-        youMayLikeService.recommendations.compactMap {
+        currentUserService.recommendations.compactMap {
             guard let node = $0 else {
                 return nil
             }

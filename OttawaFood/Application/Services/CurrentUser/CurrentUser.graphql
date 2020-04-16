@@ -1,5 +1,17 @@
 query CurrentUser {
   currentUser {
+    recommendations(first: 20) {
+      nodes {
+        id
+        index
+        restaurant {
+          id
+          yelpId
+          name
+          imageUrl
+        }
+      }
+    }
     favoriteRestaurants {
       nodes {
         id
